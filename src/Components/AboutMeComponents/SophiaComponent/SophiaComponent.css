@@ -1,0 +1,70 @@
+/* SophiaComponent.css */
+.sophia-container {
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+/* header - name in bold */
+.sophia-heading {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* bullet styling */
+.sophia-list {
+  text-align: left;
+  margin-left: 0;
+  padding-left: 20px;
+}
+
+.sophia-list-item {
+  color: #666;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+
+/* image styling */
+.image-container-wrapper {
+  display: flex;
+  justify-content: space-between; 
+  margin-top: 20px; 
+}
+
+.image-dog {
+  background-image: url('dog.jpg');
+  background-size: 100%; 
+  width: 200px;
+  height: 265px;
+}
+
+.image-puzzle {
+  background-image: url('puzzle.jpg');
+  background-size: 100%; 
+  width: 200px;
+  height: 265px;
+}
+
+.image-container {
+  background-size: 100%; 
+  width: 200px;
+  height: 265px;
+}
+
+.image-holly {
+  background-image: url('holly.jpg');
+  background-size: 100%; 
+  width: 200px;
+  height: 265px;
+}
+
+.image-tree {
+  background-image: url('lego.jpg');
+  background-size: 100%; 
+  width: 200px;
+  height: 265px;
+}
