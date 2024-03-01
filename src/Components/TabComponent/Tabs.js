@@ -20,7 +20,7 @@ const Tabs = () => {
         <TabNavItem title="Sophia" id="sophia" activeTab={activeTab} setActiveTab={setActiveTab}/>
         <TabNavItem title="Rachel" id="rachel" activeTab={activeTab} setActiveTab={setActiveTab}/>
 
-        <TabNavItem title="Adrien" id="adrien" activeTab={activeTab} setActiveTab={setActiveTab}/>
+        <TabNavItem title="Adrian" id="adrian" activeTab={activeTab} setActiveTab={setActiveTab}/>
         <TabNavItem title="Max" id="max" activeTab={activeTab} setActiveTab={setActiveTab}/>
         <TabNavItem title="Diya" id="diya" activeTab={activeTab} setActiveTab={setActiveTab}/>
         <TabNavItem title="Catherine" id="catherine" activeTab={activeTab} setActiveTab={setActiveTab}/>
@@ -39,7 +39,7 @@ const Tabs = () => {
         <TabContent id="rachel" activeTab={activeTab}>
           <p>Insert text...</p>
         </TabContent>
-        <TabContent id="adrien" activeTab={activeTab}>
+        <TabContent id="adrian" activeTab={activeTab}>
           <p>Insert text...</p>
         </TabContent>
         <TabContent id="max" activeTab={activeTab}>
