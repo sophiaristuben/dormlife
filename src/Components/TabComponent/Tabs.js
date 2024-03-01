@@ -25,6 +25,7 @@ const Tabs = () => {
         <TabNavItem title="Diya" id="diya" activeTab={activeTab} setActiveTab={setActiveTab}/>
         <TabNavItem title="Catherine" id="catherine" activeTab={activeTab} setActiveTab={setActiveTab}/>
         <TabNavItem title="Georgia" id="georgia" activeTab={activeTab} setActiveTab={setActiveTab}/>
+        <TabNavItem title="Frank" id="frank" activeTab={activeTab} setActiveTab={setActiveTab}/>
       </ul>
  
       <div className="outlet">
@@ -51,6 +52,9 @@ const Tabs = () => {
           <p>Insert text...</p>
         </TabContent>
         <TabContent id="georgia" activeTab={activeTab}>
+          <p>Insert text...</p>
+        </TabContent>
+        <TabContent id="frank" activeTab={activeTab}>
           <p>Insert text...</p>
         </TabContent>
 
