@@ -7,7 +7,7 @@ import MapboxComponent from "../MapComponents/MapboxComponent.js";
 
 // import your 
 import SophiaComponent from "../AboutMeComponents/SophiaComponent/SophiaComponent.js";
-
+import MaxComponent from "../AboutMeComponents/MaxComponent/MaxComponent.js";
 
 const Tabs = () => {
   const [activeTab, setActiveTab] = useState("mapbox");
@@ -42,7 +42,7 @@ const Tabs = () => {
           <p>Insert text...</p>
         </TabContent>
         <TabContent id="max" activeTab={activeTab}>
-          <p>Insert text...</p>
+          <MaxComponent></MaxComponent>
         </TabContent>
         <TabContent id="diya" activeTab={activeTab}>
           <p>Insert text...</p>
