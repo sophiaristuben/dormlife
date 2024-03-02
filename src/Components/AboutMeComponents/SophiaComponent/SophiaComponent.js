@@ -14,7 +14,7 @@ const SophiaComponent = () => {
           I'm originally from the Seattle area but I hate the rain and much prefer Claremont weather.
         </li>
         <li className="sophia-list-item">
-          Feel free to reach out to me if you have any questions or just want to chat!
+          Feel free to reach out to me if you have any questions or just want to chat!   
         </li>
         </ul>
         <div className="image-container-wrapper">
