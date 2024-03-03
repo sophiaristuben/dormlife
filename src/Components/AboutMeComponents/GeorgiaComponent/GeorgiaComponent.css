@@ -1,0 +1,80 @@
+/* GeorgiaComponent.css */
+.georgia-container {
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+/* header - name in bold */
+.georgia-heading {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* bullet styling */
+.georgia-list {
+  text-align: left;
+  margin-left: 0;
+  padding-left: 20px;
+}
+
+.georgia-list-item {
+  color: #666;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+
+/* image styling */
+.image-container-wrapper {
+  display: flex;
+  justify-content: space-between; 
+  margin-top: 20px; 
+}
+
+.image-scare {
+  background-image: url('https://memeprod.ap-south-1.linodeobjects.com/user-template-thumbnail/e5453ba233a83bcd1faf996e364b5efa.jpg');  
+  margin: 10px 10px 10px 10px;
+  animation: horizontal-shake 0.15s infinite;
+  height: 200px
+}
+
+@keyframes horizontal-shake {
+    0% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(5px);
+    }
+    50% {
+      transform: translateX(-5px);
+    }
+    75% {
+      transform: translateX(5px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+}
+
+.image-pop {
+  background-image: url('https://i.redd.it/tzupr4f520361.png');
+  background-size: 100%; 
+  width: 350px;
+  height: 200px;
+}
+
+.image-chipi {
+  background-image: url('https://media1.tenor.com/m/Jc9jT66AJRwAAAAd/chipi-chipi-chapa-chapa.gif');
+  background-size: 100%; 
+  height: 200px;
+}
+
+.image-container {
+  background-size: 100%; 
+  height: 200px;
+}
+
