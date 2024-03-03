@@ -8,7 +8,7 @@ const CatherineComponent = () => {
       
       <ul className="catherine-list">
         <li className="catherine-list-item">
-          Hi everyone! My name is Catherine and I am a sophomore at CMC studying Economics and Computer Science. 
+          Hi everyone! My name is Catherine and I am a sophomore at CMC studying Economics and Computer Science! 
         </li>
         <li className="catherine-list-item">
           I'm originally from the Toronto but I moved to Southern California in elementary school.
