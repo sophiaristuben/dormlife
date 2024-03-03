@@ -1,0 +1,71 @@
+/* maxComponent.css */
+.max-container {
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  
+  /* header - name in bold */
+  .max-heading {
+    color: #333;
+    font-size: 48px;
+    margin-bottom: 10px;
+    font-family: "Brush Script MT", cursive;
+    animation: colorRotate 3s linear 0s infinite;
+  }
+
+  @keyframes colorRotate {
+    from {
+      color: #6666ff;
+    }
+    10% {
+      color: #0099ff;
+    }
+    50% {
+      color: #00ff00;
+    }
+    75% {
+      color: #ff3399;
+    }
+    100% {
+      color: #6666ff;
+    }
+  }
+  
+  /* bullet styling */
+  .max-list {
+    text-align: left;
+    margin-left: 0;
+    padding-left: 20px;
+  }
+  
+  .max-list-item {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  
+  /* image styling */
+  .image-container-wrapper {
+    display: flex;
+    justify-content: space-between; 
+    margin-top: 20px; 
+  }
+  
+  img {
+    height: 265px;
+    padding: 0 5px 0 5px;
+  }
+
+  figcaption {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  
