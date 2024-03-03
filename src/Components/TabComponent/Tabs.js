@@ -8,6 +8,7 @@ import MapboxComponent from "../MapComponents/MapboxComponent.js";
 // import your 
 import SophiaComponent from "../AboutMeComponents/SophiaComponent/SophiaComponent.js";
 import MaxComponent from "../AboutMeComponents/MaxComponent/MaxComponent.js";
+import RachelComponent from "../AboutMeComponents/RachelComponent/RachelComponent.js";
 
 const Tabs = () => {
   const [activeTab, setActiveTab] = useState("mapbox");
@@ -25,6 +26,7 @@ const Tabs = () => {
         <TabNavItem title="Diya" id="diya" activeTab={activeTab} setActiveTab={setActiveTab}/>
         <TabNavItem title="Catherine" id="catherine" activeTab={activeTab} setActiveTab={setActiveTab}/>
         <TabNavItem title="Georgia" id="georgia" activeTab={activeTab} setActiveTab={setActiveTab}/>
+        <TabNavItem title="Frank" id="frank" activeTab={activeTab} setActiveTab={setActiveTab}/>
       </ul>
  
       <div className="outlet">
@@ -36,7 +38,7 @@ const Tabs = () => {
           <SophiaComponent></SophiaComponent>
         </TabContent>
         <TabContent id="rachel" activeTab={activeTab}>
-          <p>Insert text...</p>
+          <RachelComponent></RachelComponent>
         </TabContent>
         <TabContent id="adrien" activeTab={activeTab}>
           <p>Insert text...</p>
@@ -51,6 +53,9 @@ const Tabs = () => {
           <p>Insert text...</p>
         </TabContent>
         <TabContent id="georgia" activeTab={activeTab}>
+          <p>Insert text...</p>
+        </TabContent>
+        <TabContent id="frank" activeTab={activeTab}>
           <p>Insert text...</p>
         </TabContent>
 
