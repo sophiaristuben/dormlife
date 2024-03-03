@@ -16,14 +16,15 @@ const GeorgiaComponent = () => {
         <li className="georgia-list-item">
           Hope to know everyone more and learn a lot together!
         </li>
+        <li className="georgia-list-item">
+        I don't really know what to put so here are a few of my favorite cat <em> MEMEOWSS </em>!
+        </li>
         </ul>
-        <p>I don't really know what to put so here are a few of my favorite cat <em> MEMEOWSS </em>!</p>
-        <div className="image-container-wrapper">
-          <div class="image-chipi"></div>
-          <div class="image-scare"></div>
-          <div className="image-pop"></div>
+        <div class="image-chipi"></div>
+        <div class="image-scare"></div>
+        <div className="image-pop"></div>
           {/* {/* <div className="tree-container" style={{ backgroundImage: "url('dog.jpg')" }}></div> */}
-        </div>
+        
 
     </div>
   );

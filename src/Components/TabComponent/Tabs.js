@@ -7,7 +7,7 @@ import MapboxComponent from "../MapComponents/MapboxComponent.js";
 
 // import your 
 import SophiaComponent from "../AboutMeComponents/SophiaComponent/SophiaComponent.js";
-
+import GeorgiaComponent from "../AboutMeComponents/GeorgiaComponent/GeorgiaComponent.js";
 
 const Tabs = () => {
   const [activeTab, setActiveTab] = useState("mapbox");
@@ -52,7 +52,7 @@ const Tabs = () => {
           <p>Insert text...</p>
         </TabContent>
         <TabContent id="georgia" activeTab={activeTab}>
-          <p>Insert text...</p>
+          <GeorgiaComponent></GeorgiaComponent>
         </TabContent>
         <TabContent id="frank" activeTab={activeTab}>
           <p>Insert text...</p>
