@@ -43,7 +43,7 @@ const Tabs = () => {
           <RachelComponent></RachelComponent>
         </TabContent>
         <TabContent id="adrian" activeTab={activeTab}>
-          <p>Insert text...</p>
+          <AdrianComponent></AdrianComponent>
         </TabContent>
         <TabContent id="max" activeTab={activeTab}>
           <MaxComponent></MaxComponent>
