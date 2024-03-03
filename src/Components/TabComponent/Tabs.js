@@ -7,7 +7,10 @@ import MapboxComponent from "../MapComponents/MapboxComponent.js";
 
 // import your 
 import SophiaComponent from "../AboutMeComponents/SophiaComponent/SophiaComponent.js";
+import MaxComponent from "../AboutMeComponents/MaxComponent/MaxComponent.js";
 import RachelComponent from "../AboutMeComponents/RachelComponent/RachelComponent.js";
+import AdrianComponent from "../AboutMeComponents/AdrianComponent/AdrianComponent.js";
+import CatherineComponent from "../AboutMeComponents/CatherineComponent/CatherineComponent.js";
 
 const Tabs = () => {
   const [activeTab, setActiveTab] = useState("mapbox");
@@ -20,7 +23,7 @@ const Tabs = () => {
         <TabNavItem title="Sophia" id="sophia" activeTab={activeTab} setActiveTab={setActiveTab}/>
         <TabNavItem title="Rachel" id="rachel" activeTab={activeTab} setActiveTab={setActiveTab}/>
 
-        <TabNavItem title="Adrien" id="adrien" activeTab={activeTab} setActiveTab={setActiveTab}/>
+        <TabNavItem title="Adrian" id="adrian" activeTab={activeTab} setActiveTab={setActiveTab}/>
         <TabNavItem title="Max" id="max" activeTab={activeTab} setActiveTab={setActiveTab}/>
         <TabNavItem title="Diya" id="diya" activeTab={activeTab} setActiveTab={setActiveTab}/>
         <TabNavItem title="Catherine" id="catherine" activeTab={activeTab} setActiveTab={setActiveTab}/>
@@ -39,17 +42,17 @@ const Tabs = () => {
         <TabContent id="rachel" activeTab={activeTab}>
           <RachelComponent></RachelComponent>
         </TabContent>
-        <TabContent id="adrien" activeTab={activeTab}>
-          <p>Insert text...</p>
+        <TabContent id="adrian" activeTab={activeTab}>
+          <AdrianComponent></AdrianComponent>
         </TabContent>
         <TabContent id="max" activeTab={activeTab}>
-          <p>Insert text...</p>
+          <MaxComponent></MaxComponent>
         </TabContent>
         <TabContent id="diya" activeTab={activeTab}>
           <p>Insert text...</p>
         </TabContent>
         <TabContent id="catherine" activeTab={activeTab}>
-          <p>Insert text...</p>
+          <CatherineComponent></CatherineComponent>
         </TabContent>
         <TabContent id="georgia" activeTab={activeTab}>
           <p>Insert text...</p>
