@@ -9,6 +9,7 @@ import MapboxComponent from "../MapComponents/MapboxComponent.js";
 import SophiaComponent from "../AboutMeComponents/SophiaComponent/SophiaComponent.js";
 import MaxComponent from "../AboutMeComponents/MaxComponent/MaxComponent.js";
 import RachelComponent from "../AboutMeComponents/RachelComponent/RachelComponent.js";
+import CatherineComponent from "../AboutMeComponents/CatherineComponent/CatherineComponent.js";
 
 const Tabs = () => {
   const [activeTab, setActiveTab] = useState("mapbox");
@@ -50,7 +51,7 @@ const Tabs = () => {
           <p>Insert text...</p>
         </TabContent>
         <TabContent id="catherine" activeTab={activeTab}>
-          <p>Insert text...</p>
+          <CatherineComponent></CatherineComponent>
         </TabContent>
         <TabContent id="georgia" activeTab={activeTab}>
           <p>Insert text...</p>
