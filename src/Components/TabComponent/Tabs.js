@@ -7,6 +7,7 @@ import MapboxComponent from "../MapComponents/MapboxComponent.js";
 
 // import your 
 import SophiaComponent from "../AboutMeComponents/SophiaComponent/SophiaComponent.js";
+import AdrianComponent from "../AboutAdrianComponent/AdrianComponent.js";
 
 
 const Tabs = () => {
@@ -40,7 +41,7 @@ const Tabs = () => {
           <p>Insert text...</p>
         </TabContent>
         <TabContent id="adrian" activeTab={activeTab}>
-          <p>Insert text...</p>
+          <AdrianComponent></AdrianComponent>
         </TabContent>
         <TabContent id="max" activeTab={activeTab}>
           <p>Insert text...</p>
