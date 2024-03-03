@@ -9,6 +9,7 @@ import MapboxComponent from "../MapComponents/MapboxComponent.js";
 import SophiaComponent from "../AboutMeComponents/SophiaComponent/SophiaComponent.js";
 import MaxComponent from "../AboutMeComponents/MaxComponent/MaxComponent.js";
 import RachelComponent from "../AboutMeComponents/RachelComponent/RachelComponent.js";
+import AdrianComponent from "../AboutMeComponents/AdrianComponent/AdrianComponent.js";
 import CatherineComponent from "../AboutMeComponents/CatherineComponent/CatherineComponent.js";
 
 const Tabs = () => {
@@ -42,7 +43,7 @@ const Tabs = () => {
           <RachelComponent></RachelComponent>
         </TabContent>
         <TabContent id="adrian" activeTab={activeTab}>
-          <p>Insert text...</p>
+          <AdrianComponent></AdrianComponent>
         </TabContent>
         <TabContent id="max" activeTab={activeTab}>
           <MaxComponent></MaxComponent>
