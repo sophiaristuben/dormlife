@@ -1,29 +1,42 @@
 import React from "react";
-import "./MaxComponent.css"; 
+import "./MaxComponent.css";
+import yosemite from './yosemite.JPG';
+import copenhagen from './copenhagen.jpeg';
+import levi from './levi.JPG';
 
 const MaxComponent = () => {
   return (
-    <div className="sophia-container">
-      <h2 className="sophia-heading">Sophia</h2>
-      
-      <ul className="sophia-list">
-        <li className="sophia-list-item">
-          Hi everyone! My name is Sophia and I am a senior at Pomona studying Computer Science.
+    <div className="max-container">
+      <h2 className="max-heading">Max</h2>
+
+      <ul className="max-list">
+        <li className="max-list-item">
+          Hello! My name's Max and I'm a senior at Pomona majoring in CS.
         </li>
-        <li className="sophia-list-item">
-          I'm originally from the Seattle area but I hate the rain and much prefer Claremont weather.
+        <li className="max-list-item">
+          I'm from the San Francisco Bay Area, specifically Piedmont.
         </li>
-        <li className="sophia-list-item">
-          Feel free to reach out to me if you have any questions or just want to chat!
+        <li className="max-list-item">
+          I studied abroad in Copenhagen last year.
         </li>
-        </ul>
-        <div className="image-container-wrapper">
-          <div className="image-dog"></div>
-          <div className="image-tree"></div>
-          <div className="image-puzzle"></div>
-          <div className="image-holly"></div>
-          {/* {/* <div className="tree-container" style={{ backgroundImage: "url('dog.jpg')" }}></div> */}
-        </div>
+        <li className="max-list-item">
+          My cat's name is Levi.
+        </li>
+      </ul>
+      <div className="image-container-wrapper">
+        <figure>
+          <img src={yosemite} alt="yosemite"></img>
+          <figcaption>Me in Yosemite</figcaption>
+        </figure>
+        <figure>
+          <img src={copenhagen} alt="copenhagen"></img>
+          <figcaption>Copenhagen</figcaption>
+        </figure>
+        <figure>
+          <img src={levi} alt="levi"></img>
+          <figcaption>Levi</figcaption>
+        </figure>
+      </div>
 
     </div>
   );
