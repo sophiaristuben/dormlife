@@ -9,6 +9,7 @@ import MapboxComponent from "../MapComponents/MapboxComponent.js";
 import SophiaComponent from "../AboutMeComponents/SophiaComponent/SophiaComponent.js";
 import MaxComponent from "../AboutMeComponents/MaxComponent/MaxComponent.js";
 import RachelComponent from "../AboutMeComponents/RachelComponent/RachelComponent.js";
+import GeorgiaComponent from "../AboutMeComponents/GeorgiaComponent/GeorgiaComponent.js";
 
 const Tabs = () => {
   const [activeTab, setActiveTab] = useState("mapbox");
