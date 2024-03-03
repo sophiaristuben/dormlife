@@ -11,7 +11,7 @@ const RachelComponent = () => {
           Hi everyone! My name is Rachel and I am a senior at Pomona studying Computer Science!
         </li>
         <li className="rachel-list-item">
-          I'm originally from the Guam, which is a small island in the Pacific! A US terriroty btw wow
+          I'm originally from the Guam, which is a small island in the Pacific! A US terriroty btw 
         </li>
         <li className="rachel-list-item">
           Feel free to reach out to me if you have any questions or just want to chat!
