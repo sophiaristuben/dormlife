@@ -1,0 +1,65 @@
+/* DiyaComponent.css */
+.diya-container {
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  
+  }
+  
+  /* header - name in bold */
+  .diya-heading {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  /* bullet styling */
+  .diya-list {
+    text-align: left;
+    margin-left: 0;
+    padding-left: 20px;
+  }
+  
+  .diya-list-item {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  
+  /* image styling */
+  .image-container-wrapper {
+    display: flex;
+    justify-content: space-between; 
+    margin-top: 20px; 
+  }
+  
+  .image-food {
+    background-image: url('food.JPG');
+    background-size: 100%; 
+    width: 200px;
+    height: 265px;
+  }
+  
+  .image-tree {
+    background-image: url('tree.jpg');
+    background-size: 100%; 
+    width: 200px;
+    height: 265px;
+  }
+  
+  .image-wedding {
+    background-image: url('wedding.jpg');
+    background-size: 100%; 
+    width: 200px;
+    height: 265px;
+  }
+  
+  .image-concert {
+    background-image: url('concert.jpg');
+    background-size: 100%; 
+    width: 200px;
+    height: 265px;
+  }
+  
