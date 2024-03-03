@@ -48,7 +48,7 @@ const Tabs = () => {
         <TabContent id="diya" activeTab={activeTab}>
           <p>Insert text...</p>
         </TabContent>
-        <TabContent id="catherine" activeTab={activeTab}>
+        <TabContent id="catherine" activeTab={activeTab}> 
           <p>Insert text...</p>
         </TabContent>
         <TabContent id="georgia" activeTab={activeTab}>
