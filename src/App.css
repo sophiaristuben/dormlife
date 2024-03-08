@@ -15,25 +15,28 @@
  }
 
  .Tabs {
-  width: 80%;
+  width: 100%; /*controlling width of the screen*/
   height: auto;
   min-height: 80%;
   background: #ffffff;
   border: 1px solid #6bb7d8;
-  margin: 3.5rem auto 1.5rem;
-  padding: 2rem 1rem;
+  /* margin: 3.5rem auto 1.5rem;
+  padding: 2rem 1rem; */
+  margin: 1.5rem auto; /* Adjusted margin */
+  padding: 3.5rem 1rem 1.5rem; /* Adjusted padding */
   color: #003a53;
-  border-radius: 2rem;
+  
+  /* border-radius: 2rem;
   @media (max-width: 769px) {
    padding: 2rem 0;
-  }
+  } */
  }
  
  /*Styling specific to our maps*/
  .map-container {
   position: absolute;
   height:600px;
-  width:100%;
+  width:150%;
   left: 0;
 }
  /* Tab Navigation */
@@ -75,6 +78,8 @@ ul.nav li.active {
 
 /* Tab Content Styles */
 .TabContent {
+  width: 100%;
+  height: 100%;
   font-size: 2rem;
   text-align: center;
   position: relative;
