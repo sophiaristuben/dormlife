@@ -1,10 +1,15 @@
 import "./App.css";
 import Tabs from "./Components/TabComponent/Tabs";
+import { Header } from "./Components/Header/Header";
+
 const App = () => {
   return (
-    <div className="App">
-      <Tabs />
-    </div>
+    <>
+      <Header />
+      <div className="App">
+        <Tabs />
+      </div>
+    </>
   );
 }
 export default App;

@@ -8,25 +8,29 @@
   width: 100vw;
   height: 100vh;
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
   overflow: hidden;
   border:none;
  }
 
- .Tabs {
-  width: 80%;
-  height: auto;
-  min-height: 80%;
-  background: #ffffff;
-  border: 1px solid #6bb7d8;
-  margin: 3.5rem auto 1.5rem;
-  padding: 2rem 1rem;
-  color: #003a53;
-  border-radius: 2rem;
-  @media (max-width: 769px) {
-   padding: 2rem 0;
-  }
+ .dormNav {
+  overflow: hidden;
+  flex-grow: 5;
+ }
+
+ .floorNav {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-evenly;
+    padding: 10rem 0;
+    margin: 0 0.5rem 0 0;
+ }
+
+ .outlet {
+  overflow: scroll;
  }
  
  /*Styling specific to our maps*/
@@ -37,8 +41,8 @@
   left: 0;
 }
  /* Tab Navigation */
-ul.nav {
-  width: 60%;
+ul.dormButtons {
+  width: 100%;
   margin: 0 auto 2rem;
   display: flex;
   align-items: center;
@@ -46,36 +50,56 @@ ul.nav {
   border: 1px solid #6bb7d8;
   border-radius: 2rem;
   padding-left: 0px;
+  overflow: scroll;
   @media (max-width: 768px) {
     width: 90%;
   }
 }
-ul.nav li {
+ul.dormButtons li {
   width: 50%;
-  padding: 1rem;
+  height: 4.37rem;
+  padding: 1.5rem 1rem;
   list-style: none;
   text-align: center;
   cursor: pointer;
   transition: all 0.7s;
 }
-ul.nav li:first-child {
+ul.dormButtons li:first-child {
   border-bottom-left-radius: 2rem;
   border-top-left-radius: 2rem;
 }
-ul.nav li:last-child {
+ul.dormButtons li:last-child {
   border-bottom-right-radius: 2rem;
   border-top-right-radius: 2rem;
 }
-ul.nav li:hover {
+ul.dormButtons li:hover {
   background: #6bb7d8;
 }
-ul.nav li.active {
+ul.dormButtons li.active {
   background: #6bb7d8;
 }
 
-/* Tab Content Styles */
+.Tabs {
+  background: #ffffff;
+  border: 1px solid #6bb7d8;
+  color: #003a53;
+  display: flex;
+  flex: 0 5 auto;
+  justify-content: center;
+  height: auto;
+  margin: 0.5rem auto;
+  min-height: 80%;
+  padding: 1rem 1rem;
+  width: 95%;
+  @media (max-width: 769px) {
+   padding: 2rem 0;
+  }
+ }
+
+ /* Tab Content Styles */
 .TabContent {
   font-size: 2rem;
   text-align: center;
   position: relative;
+  overflow: scroll;
 }
