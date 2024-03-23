@@ -14,69 +14,22 @@
   border:none;
  }
 
- .dormNav {
-  overflow: hidden;
-  flex-grow: 5;
- }
-
  .floorNav {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    flex-grow: 1;
-    justify-content: space-evenly;
-    padding: 10rem 0;
-    margin: 0 0.5rem 0 0;
- }
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-evenly;
+  padding: 10rem 0;
+  margin: 0 0.5rem 0 0;
+}
 
- .outlet {
-  overflow: scroll;
- }
- 
  /*Styling specific to our maps*/
  .map-container {
   position: absolute;
   height:600px;
   width:100%;
   left: 0;
-}
- /* Tab Navigation */
-ul.dormButtons {
-  width: 100%;
-  margin: 0 auto 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border: 1px solid #6bb7d8;
-  border-radius: 2rem;
-  padding-left: 0px;
-  overflow: scroll;
-  @media (max-width: 768px) {
-    width: 90%;
-  }
-}
-ul.dormButtons li {
-  width: 50%;
-  height: 4.37rem;
-  padding: 1.5rem 1rem;
-  list-style: none;
-  text-align: center;
-  cursor: pointer;
-  transition: all 0.7s;
-}
-ul.dormButtons li:first-child {
-  border-bottom-left-radius: 2rem;
-  border-top-left-radius: 2rem;
-}
-ul.dormButtons li:last-child {
-  border-bottom-right-radius: 2rem;
-  border-top-right-radius: 2rem;
-}
-ul.dormButtons li:hover {
-  background: #6bb7d8;
-}
-ul.dormButtons li.active {
-  background: #6bb7d8;
 }
 
 .Tabs {

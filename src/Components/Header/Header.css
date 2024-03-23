@@ -30,7 +30,7 @@ ul.header li:hover {
 
 .school {
     background: #ffffff;
-    border: 1px solid #6bb7d8;
+    /* border: 1px solid #6bb7d8; */
     border-radius: 1rem;
     padding: 1rem 2rem;
     margin: 0 0.5rem;
