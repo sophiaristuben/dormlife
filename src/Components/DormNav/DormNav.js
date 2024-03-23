@@ -1,20 +1,25 @@
 import React, { useState } from "react";
 import TabNavItem from "../TabComponent/TabNavItem";
 import TabContent from "../TabComponent/TabContent";
-// import { RoomInfo } from "../TabComponent/RoomInfo";
- // import map components
+import { Popup } from "../Popup/Popup.js";
+
+// import map components
 import MapboxComponent from "../MapComponents/MapboxComponent.js";
 import "./DormNav.css";
 
-import Popup from "../TabComponent/RoomInfo";
+// this will eventually get set by whereever is clicked on the map
+const roomProps = {
+    building: "Sontag",
+    roomNumber: "253"
+};
 
-export const DormNav = ({currSchool}) => {
-    const [activeTab, setActiveTab] = useState("mapbox");
+export const DormNav = ({ currSchool, activeTab, setActiveTab }) => {
+    
 
     return (
         <div className="dormNav" onClick={Popup}>
             <ul className="dormButtons">
-                <TabNavItem title="Sontag" id="mapbox" activeTab={activeTab} setActiveTab={setActiveTab} />
+                <TabNavItem title="Sontag" id="sontag" activeTab={activeTab} setActiveTab={setActiveTab} />
                 <TabNavItem title="Walker" id="walker" activeTab={activeTab} setActiveTab={setActiveTab} />
                 <TabNavItem title="Clark 1" id="clark1" activeTab={activeTab} setActiveTab={setActiveTab} />
                 <TabNavItem title="Clark III" id="clark3" activeTab={activeTab} setActiveTab={setActiveTab} />
@@ -26,11 +31,16 @@ export const DormNav = ({currSchool}) => {
                 <TabNavItem title="Gibson" id="gibson" activeTab={activeTab} setActiveTab={setActiveTab} />
             </ul>
             <div className="outlet">
+                <div className="rightAlign">
+                {activeTab !== "mapbox" && (
+                    <Popup {...roomProps}/>
+                )}
+                </div>
                 <TabContent id="mapbox" activeTab={activeTab}>
                     <MapboxComponent currSchool={currSchool}></MapboxComponent>
                     {/* <RoomInfo /> */}
                 </TabContent>
-                
+
             </div>
         </div>
     )

@@ -1,0 +1,23 @@
+.popupContainer {
+    background-color: lightblue;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 2rem;
+    width: 50%;
+    justify-content: right;
+}
+
+.popupRatings {
+
+}
+
+.popupReviews {
+    font-size: 1rem;
+    margin: 1rem;
+}
+
+.symbol {
+    margin: 1rem 0;
+    width: 3rem;
+}
