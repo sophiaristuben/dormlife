@@ -1,0 +1,59 @@
+.container {
+    display: flex;
+    flex-flow: row no-wrap; /* same as doing flex-direction and flex */
+    align-items: center;
+    padding-right: 10%;
+}   
+.header {
+    margin: 2rem 1rem 1rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 3;
+    overflow: scroll;
+}
+
+ul.header li {
+    list-style: none;
+    text-align: center;
+    cursor: pointer;
+}
+
+ul.header li:hover {
+    background: #6bb7d8;
+  }
+
+.logo {
+    align-items: center;
+    flex-grow: 0.5;
+    margin: 2rem 1rem;
+}
+
+.school {
+    background: #ffffff;
+    /* border: 1px solid #6bb7d8; */
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    margin: 0 0.5rem;
+    flex-grow: 1;
+}
+
+.school.cmc {
+    background: rgb(190, 40, 40);
+}
+
+.school.mudd {
+    background: rgb(255, 228, 53);
+}
+
+.school.pitzer {
+    background: rgb(233, 150, 33);
+}
+
+.school.pomona {
+    background: rgb(99, 153, 239);
+}
+
+.school.scripps {
+    background: rgb(89, 146, 96);
+}
+

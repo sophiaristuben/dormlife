@@ -2,6 +2,7 @@ import React from "react";
 const TabNavItem = ({ id, title, activeTab, setActiveTab }) => {
  
  const handleClick = () => {
+  console.log("TabNav clicked");
    setActiveTab(id);
  };
  

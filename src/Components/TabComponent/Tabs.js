@@ -1,67 +1,15 @@
-import React, { useState } from "react";
-import TabNavItem from "./TabNavItem.js";
-import TabContent from "./TabContent.js";
+import React from "react";
+import { DormNav } from "../DormNav/DormNav";
 
-// import map components
-import MapboxComponent from "../MapComponents/MapboxComponent.js";
-
-// import your 
-import SophiaComponent from "../AboutMeComponents/SophiaComponent/SophiaComponent.js";
-import MaxComponent from "../AboutMeComponents/MaxComponent/MaxComponent.js";
-import RachelComponent from "../AboutMeComponents/RachelComponent/RachelComponent.js";
-import AdrianComponent from "../AboutMeComponents/AdrianComponent/AdrianComponent.js";
-import CatherineComponent from "../AboutMeComponents/CatherineComponent/CatherineComponent.js";
-
-const Tabs = () => {
-  const [activeTab, setActiveTab] = useState("mapbox");
- 
+const Tabs = ({currSchool}) => {
   return (
     <div className="Tabs">
-      <ul className="nav">
-        <TabNavItem title="Map" id="mapbox" activeTab={activeTab} setActiveTab={setActiveTab}/>
-
-        <TabNavItem title="Sophia" id="sophia" activeTab={activeTab} setActiveTab={setActiveTab}/>
-        <TabNavItem title="Rachel" id="rachel" activeTab={activeTab} setActiveTab={setActiveTab}/>
-
-        <TabNavItem title="Adrian" id="adrian" activeTab={activeTab} setActiveTab={setActiveTab}/>
-        <TabNavItem title="Max" id="max" activeTab={activeTab} setActiveTab={setActiveTab}/>
-        <TabNavItem title="Diya" id="diya" activeTab={activeTab} setActiveTab={setActiveTab}/>
-        <TabNavItem title="Catherine" id="catherine" activeTab={activeTab} setActiveTab={setActiveTab}/>
-        <TabNavItem title="Georgia" id="georgia" activeTab={activeTab} setActiveTab={setActiveTab}/>
-        <TabNavItem title="Frank" id="frank" activeTab={activeTab} setActiveTab={setActiveTab}/>
-      </ul>
- 
-      <div className="outlet">
-        <TabContent id="mapbox" activeTab={activeTab}>
-          <MapboxComponent></MapboxComponent>
-        </TabContent>
-
-        <TabContent id="sophia" activeTab={activeTab}>
-          <SophiaComponent></SophiaComponent>
-        </TabContent>
-        <TabContent id="rachel" activeTab={activeTab}>
-          <RachelComponent></RachelComponent>
-        </TabContent>
-        <TabContent id="adrian" activeTab={activeTab}>
-          <AdrianComponent></AdrianComponent>
-        </TabContent>
-        <TabContent id="max" activeTab={activeTab}>
-          <MaxComponent></MaxComponent>
-        </TabContent>
-        <TabContent id="diya" activeTab={activeTab}>
-          <p>Insert text...</p>
-        </TabContent>
-        <TabContent id="catherine" activeTab={activeTab}>
-          <CatherineComponent></CatherineComponent>
-        </TabContent>
-        <TabContent id="georgia" activeTab={activeTab}>
-          <p>Insert text...</p>
-        </TabContent>
-        <TabContent id="frank" activeTab={activeTab}>
-          <p>Insert text...</p>
-        </TabContent>
-
+      <div className="floorNav">
+        <div>Floor 1</div>
+        <div>Floor 2</div>
+        <div>Floor 3</div>
       </div>
+      <DormNav currSchool={currSchool} />
     </div>
   );
 };
