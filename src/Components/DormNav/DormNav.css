@@ -3,8 +3,49 @@
     flex-grow: 5;
 }
 
+img.floorplan {
+    width: auto;
+    /* height: 10rem; */
+}
+
+.dormMapContainer {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
 .outlet {
     overflow: scroll;
+}
+
+.popupContainer {
+    background-color: lightblue;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 2rem;
+    width: 40%;
+    height: 40%;
+    justify-content: right;
+    text-align: left;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+}
+
+.popupRatings {
+    font-size: 1rem;
+}
+
+.popupReviews {
+    font-size: 1rem;
+    margin: 1rem;
+}
+
+.symbol {
+    margin: 1rem 0;
+    width: 3rem;
 }
 
 /* Tab Navigation */
