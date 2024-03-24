@@ -1,0 +1,63 @@
+/* AdrianComponent.css */
+.adrian-container {
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  
+  }
+  
+  /* header - name in bold */
+  .adrian-heading {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  /* bullet styling */
+  .adrian-list {
+    text-align: left;
+    margin-left: 0;
+    padding-left: 20px;
+  }
+  
+  .adrian-list-item {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  
+  /* image styling */
+  .image-container-wrapper {
+    display: flex;
+    justify-content: space-between; 
+    margin-top: 20px; 
+  }
+  
+  .image-lake {
+    background-image: url('lake.jpg');
+    background-size: 100%; 
+    width: 400px;
+    height: 265px;
+  }
+  
+  .image-swim {
+    background-image: url('swim.jpg');
+    background-size: 100%; 
+    width: 200px;
+    height: 265px;
+  }
+  
+  .image-paddleboard {
+    background-image: url('paddleboard.jpg');
+    background-size: 100%; 
+    width: 200px;
+    height: 265px;
+  }
+  
+  .image-container {
+    background-size: 100%; 
+    width: 200px;
+    height: 265px;
+  }
