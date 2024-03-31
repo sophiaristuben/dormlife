@@ -3,16 +3,13 @@ import TabNavItem from "../TabComponents/TabNavItem.js";
 import TabContent from "../TabComponents/TabContent.js";
 import { Popup } from "./Popup/Popup.js";
 import { DormMap } from "./DormMap/DormMap.js";
+import WalkerComponent from "../PomonaComponents/WalkerComponent/WalkerComponent.js";
+import SontagComponent from "../PomonaComponents/SontagComponent/SontagComponent.js";
 
 // import map components
 import MapboxComponent from "../MapComponents/MapboxComponent.js";
 import "./DormNav.css";
 
-// this will eventually get set by whereever is clicked on the map
-// const roomProps = {
-//     building: "Sontag",
-//     roomNumber: "253"
-// };
 
 export const DormNav = ({ currSchool, activeTab, setActiveTab }) => {
     const [showPopup, setShowPopup] = useState(false);
@@ -32,7 +29,15 @@ export const DormNav = ({ currSchool, activeTab, setActiveTab }) => {
                 <TabNavItem title="Gibson" id="gibson" activeTab={activeTab} setActiveTab={setActiveTab} setShowPopup={setShowPopup}/>
             </ul>
             <div className="outlet">
+                {activeTab === "sontag" && (
+                <SontagComponent activeTab={activeTab} 
+                clickedArea={clickedArea} 
+                setClickedArea={setClickedArea} showPopup={showPopup} setShowPopup={setShowPopup} />
+                )}
                 {activeTab === "walker" && (
+                    <WalkerComponent activeTab={activeTab} clickedArea={clickedArea} setClickedArea={setClickedArea} showPopup={showPopup} setShowPopup={setShowPopup} />
+                )}
+                {activeTab === "clark1" && (
                 <TabContent id={activeTab} activeTab={activeTab}>
                     <div className="dormMapContainer">
                         <DormMap setShowPopup={setShowPopup} setClickedArea={setClickedArea}/>
@@ -42,9 +47,79 @@ export const DormNav = ({ currSchool, activeTab, setActiveTab }) => {
                     </div>
                 </TabContent>
                 )}
-                {activeTab === "mapbox" && (
+                {activeTab === "clark3" && (
+                <TabContent id={activeTab} activeTab={activeTab}>
+                    <div className="dormMapContainer">
+                        <DormMap setShowPopup={setShowPopup} setClickedArea={setClickedArea}/>
+                        {showPopup && (
+                                <Popup {...clickedArea}/>
+                            )}
+                    </div>
+                </TabContent>
+                )}
+                {activeTab === "clark5" && (
+                <TabContent id={activeTab} activeTab={activeTab}>
+                    <div className="dormMapContainer">
+                        <DormMap setShowPopup={setShowPopup} setClickedArea={setClickedArea}/>
+                        {showPopup && (
+                                <Popup {...clickedArea}/>
+                            )}
+                    </div>
+                </TabContent>
+                )}
+                {activeTab === "mudd" && (
+                <TabContent id={activeTab} activeTab={activeTab}>
+                    <div className="dormMapContainer">
+                        <DormMap setShowPopup={setShowPopup} setClickedArea={setClickedArea}/>
+                        {showPopup && (
+                                <Popup {...clickedArea}/>
+                            )}
+                    </div>
+                </TabContent>
+                )}
+                {activeTab === "blaisdell" && (
+                <TabContent id={activeTab} activeTab={activeTab}>
+                    <div className="dormMapContainer">
+                        <DormMap setShowPopup={setShowPopup} setClickedArea={setClickedArea}/>
+                        {showPopup && (
+                                <Popup {...clickedArea}/>
+                            )}
+                    </div>
+                </TabContent>
+                )}
+                {activeTab === "harwood" && (
+                <TabContent id={activeTab} activeTab={activeTab}>
+                    <div className="dormMapContainer">
+                        <DormMap setShowPopup={setShowPopup} setClickedArea={setClickedArea}/>
+                        {showPopup && (
+                                <Popup {...clickedArea}/>
+                            )}
+                    </div>
+                </TabContent>
+                )}
+                {activeTab === "sontag" && (
+                <TabContent id={activeTab} activeTab={activeTab}>
+                    <div className="dormMapContainer">
+                        <DormMap setShowPopup={setShowPopup} setClickedArea={setClickedArea}/>
+                        {showPopup && (
+                                <Popup {...clickedArea}/>
+                            )}
+                    </div>
+                </TabContent>
+                )}
+                {activeTab === "oldenborg" && (
                 <TabContent id="mapbox" activeTab={activeTab}>
                     <MapboxComponent currSchool={currSchool}></MapboxComponent>
+                </TabContent>
+                )}
+                {activeTab === "gibson" && (
+                <TabContent id={activeTab} activeTab={activeTab}>
+                    <div className="dormMapContainer">
+                        <DormMap setShowPopup={setShowPopup} setClickedArea={setClickedArea}/>
+                        {showPopup && (
+                                <Popup {...clickedArea}/>
+                            )}
+                    </div>
                 </TabContent>
                 )}
                 
