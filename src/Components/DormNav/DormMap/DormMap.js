@@ -1,4 +1,5 @@
-import React from "react";
+import React, {useEffect} from "react";
+import imageMapResize from 'image-map-resizer';
 
 export const DormMap = ({setShowPopup, setClickedArea, map}) => {
     const handleAreaClick = (areaInfo, event) => {
@@ -7,8 +8,11 @@ export const DormMap = ({setShowPopup, setClickedArea, map}) => {
         setShowPopup(true);
         setClickedArea(areaInfo);
     }
+    useEffect(() => {
+        imageMapResize();
+      }, []);
     return (
-        <div>
+        <div className="mapImageContainer">
             {/* <img className="floorplan" src={map} useMap="#image-map" alt="dorm map"/>
             <map name="image-map">
                 <area target="" alt="652" title="652" href="" coords="44,97,114,15" shape="rect" onClick={(event) => handleAreaClick({ building: "Walker", roomNumber: "652" }, event)}/>

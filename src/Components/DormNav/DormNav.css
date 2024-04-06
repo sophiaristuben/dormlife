@@ -1,38 +1,45 @@
 .dormNav {
-    overflow: hidden;
+    overflow: auto;
     flex-grow: 5;
 }
 
 img.floorplan {
-    width: auto;
-    /* height: 10rem; */
+    height: 70%;
     float: left;
 }
 
 .dormMapContainer {
     display: flex;
     flex-direction: row;
-    position: relative;
+    height: 100%;
+}
+
+.mapImageContainer {
+    width: 70%;
+    overflow: auto;
 }
 
 .outlet {
     overflow: scroll;
+    height: 100%;
+}
+
+.popUp {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    justify-content: right;
+    text-align: left;
 }
 
 .popupContainer {
     background-color: lightblue;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    padding: 2rem;
-    width: 40%;
-    height: 40%;
-    justify-content: right;
-    text-align: left;
+    width: 30%;
+    height: 100%;
     position: absolute;
     top: 0;
     right: 0;
-    z-index: 10;
+    overflow: auto;
 }
 
 .popupRatings {

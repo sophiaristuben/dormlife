@@ -2,9 +2,18 @@ import React, { useState } from "react";
 import TabNavItem from "../TabComponents/TabNavItem.js";
 import TabContent from "../TabComponents/TabContent.js";
 import { Popup } from "./Popup/Popup.js";
-import { DormMap } from "./DormMap/DormMap.js";
 import WalkerComponent from "../PomonaComponents/WalkerComponent/WalkerComponent.js";
 import SontagComponent from "../PomonaComponents/SontagComponent/SontagComponent.js";
+import ClarkIComponent from "../PomonaComponents/ClarkIComponent/ClarkIComponent.js";
+import ClarkIIIComponent from "../PomonaComponents/ClarkIIIComponent/ClarkIIIComponent.js";
+import ClarkVComponent from "../PomonaComponents/ClarkVComponent/ClarkVComponent.js";
+import HarwoodComponent from "../PomonaComponents/HarwoodComponent/HarwoodComponent.js";
+import GibsonComponent from "../PomonaComponents/GibsonComponent/GibsonComponent.js";
+import OldenborgComponent from "../PomonaComponents/OldenborgComponent/OldenborgComponent.js";
+import DialynasComponent from "../PomonaComponents/DialynasComponent/DialynasComponent.js";
+import MuddComponent from "../PomonaComponents/MuddComponent/MuddComponent.js";
+import BlaisdellComponent from "../PomonaComponents/BlaisdellComponent/BlaisdellComponent.js";
+import WigComponent from "../PomonaComponents/WigComponent/WigComponent.js";
 
 // import map components
 import MapboxComponent from "../MapComponents/MapboxComponent.js";
@@ -17,112 +26,132 @@ export const DormNav = ({ currSchool, activeTab, setActiveTab }) => {
     return (
         <div className="dormNav" onClick={Popup}>
             <ul className="dormButtons">
-                <TabNavItem title="Sontag" id="sontag" activeTab={activeTab} setActiveTab={setActiveTab} setShowPopup={setShowPopup}/>
-                <TabNavItem title="Walker" id="walker" activeTab={activeTab} setActiveTab={setActiveTab} setShowPopup={setShowPopup}/>
-                <TabNavItem title="Clark 1" id="clark1" activeTab={activeTab} setActiveTab={setActiveTab} setShowPopup={setShowPopup}/>
-                <TabNavItem title="Clark III" id="clark3" activeTab={activeTab} setActiveTab={setActiveTab} setShowPopup={setShowPopup}/>
-                <TabNavItem title="Clark V" id="clark5" activeTab={activeTab} setActiveTab={setActiveTab} setShowPopup={setShowPopup}/>
-                <TabNavItem title="Mudd" id="mudd" activeTab={activeTab} setActiveTab={setActiveTab} setShowPopup={setShowPopup}/>
-                <TabNavItem title="Blaisdell" id="blaisdell" activeTab={activeTab} setActiveTab={setActiveTab} setShowPopup={setShowPopup}/>
-                <TabNavItem title="Harwood" id="harwood" activeTab={activeTab} setActiveTab={setActiveTab} setShowPopup={setShowPopup}/>
-                <TabNavItem title="Oldenborg" id="oldenborg" activeTab={activeTab} setActiveTab={setActiveTab} setShowPopup={setShowPopup}/>
-                <TabNavItem title="Gibson" id="gibson" activeTab={activeTab} setActiveTab={setActiveTab} setShowPopup={setShowPopup}/>
+                <TabNavItem title="Sontag" id="sontag" activeTab={activeTab} setActiveTab={setActiveTab} setShowPopup={setShowPopup} />
+                <TabNavItem title="Walker" id="walker" activeTab={activeTab} setActiveTab={setActiveTab} setShowPopup={setShowPopup} />
+                <TabNavItem title="Clark 1" id="clark1" activeTab={activeTab} setActiveTab={setActiveTab} setShowPopup={setShowPopup} />
+                <TabNavItem title="Clark III" id="clark3" activeTab={activeTab} setActiveTab={setActiveTab} setShowPopup={setShowPopup} />
+                <TabNavItem title="Clark V" id="clark5" activeTab={activeTab} setActiveTab={setActiveTab} setShowPopup={setShowPopup} />
+                <TabNavItem title="Mudd" id="mudd" activeTab={activeTab} setActiveTab={setActiveTab} setShowPopup={setShowPopup} />
+                <TabNavItem title="Blaisdell" id="blaisdell" activeTab={activeTab} setActiveTab={setActiveTab} setShowPopup={setShowPopup} />
+                <TabNavItem title="Harwood" id="harwood" activeTab={activeTab} setActiveTab={setActiveTab} setShowPopup={setShowPopup} />
+                <TabNavItem title="Oldenborg" id="oldenborg" activeTab={activeTab} setActiveTab={setActiveTab} setShowPopup={setShowPopup} />
+                <TabNavItem title="Gibson" id="gibson" activeTab={activeTab} setActiveTab={setActiveTab} setShowPopup={setShowPopup} />
             </ul>
             <div className="outlet">
+                {activeTab === "mapbox" && (
+                    <TabContent id="mapbox" activeTab={activeTab}>
+                        <MapboxComponent currSchool={currSchool}></MapboxComponent>
+                        {/* <RoomInfo /> */}
+                    </TabContent>
+                )}
                 {activeTab === "sontag" && (
-                <SontagComponent activeTab={activeTab} 
-                clickedArea={clickedArea} 
-                setClickedArea={setClickedArea} showPopup={showPopup} setShowPopup={setShowPopup} />
+                    <SontagComponent 
+                        activeTab={activeTab}
+                        clickedArea={clickedArea}
+                        setClickedArea={setClickedArea} 
+                        showPopup={showPopup} 
+                        setShowPopup={setShowPopup} />
                 )}
                 {activeTab === "walker" && (
-                    <WalkerComponent activeTab={activeTab} clickedArea={clickedArea} setClickedArea={setClickedArea} showPopup={showPopup} setShowPopup={setShowPopup} />
+                    <WalkerComponent 
+                        activeTab={activeTab} 
+                        clickedArea={clickedArea} 
+                        setClickedArea={setClickedArea} 
+                        showPopup={showPopup} 
+                        setShowPopup={setShowPopup} 
+                    />
                 )}
                 {activeTab === "clark1" && (
-                <TabContent id={activeTab} activeTab={activeTab}>
-                    <div className="dormMapContainer">
-                        <DormMap setShowPopup={setShowPopup} setClickedArea={setClickedArea}/>
-                        {showPopup && (
-                                <Popup {...clickedArea}/>
-                            )}
-                    </div>
-                </TabContent>
+                    <ClarkIComponent 
+                        activeTab={activeTab} 
+                        clickedArea={clickedArea} 
+                        setClickedArea={setClickedArea} 
+                        showPopup={showPopup} 
+                        setShowPopup={setShowPopup} 
+                    />
                 )}
                 {activeTab === "clark3" && (
-                <TabContent id={activeTab} activeTab={activeTab}>
-                    <div className="dormMapContainer">
-                        <DormMap setShowPopup={setShowPopup} setClickedArea={setClickedArea}/>
-                        {showPopup && (
-                                <Popup {...clickedArea}/>
-                            )}
-                    </div>
-                </TabContent>
+                    <ClarkIIIComponent 
+                    activeTab={activeTab} 
+                    clickedArea={clickedArea} 
+                    setClickedArea={setClickedArea} 
+                    showPopup={showPopup} 
+                    setShowPopup={setShowPopup} 
+                />
                 )}
                 {activeTab === "clark5" && (
-                <TabContent id={activeTab} activeTab={activeTab}>
-                    <div className="dormMapContainer">
-                        <DormMap setShowPopup={setShowPopup} setClickedArea={setClickedArea}/>
-                        {showPopup && (
-                                <Popup {...clickedArea}/>
-                            )}
-                    </div>
-                </TabContent>
+                    <ClarkVComponent 
+                    activeTab={activeTab} 
+                    clickedArea={clickedArea} 
+                    setClickedArea={setClickedArea} 
+                    showPopup={showPopup} 
+                    setShowPopup={setShowPopup} 
+                />
                 )}
                 {activeTab === "mudd" && (
-                <TabContent id={activeTab} activeTab={activeTab}>
-                    <div className="dormMapContainer">
-                        <DormMap setShowPopup={setShowPopup} setClickedArea={setClickedArea}/>
-                        {showPopup && (
-                                <Popup {...clickedArea}/>
-                            )}
-                    </div>
-                </TabContent>
+                    <MuddComponent 
+                    activeTab={activeTab} 
+                    clickedArea={clickedArea} 
+                    setClickedArea={setClickedArea} 
+                    showPopup={showPopup} 
+                    setShowPopup={setShowPopup} 
+                />
                 )}
                 {activeTab === "blaisdell" && (
-                <TabContent id={activeTab} activeTab={activeTab}>
-                    <div className="dormMapContainer">
-                        <DormMap setShowPopup={setShowPopup} setClickedArea={setClickedArea}/>
-                        {showPopup && (
-                                <Popup {...clickedArea}/>
-                            )}
-                    </div>
-                </TabContent>
+                    <BlaisdellComponent 
+                    activeTab={activeTab} 
+                    clickedArea={clickedArea} 
+                    setClickedArea={setClickedArea} 
+                    showPopup={showPopup} 
+                    setShowPopup={setShowPopup} 
+                />
                 )}
                 {activeTab === "harwood" && (
-                <TabContent id={activeTab} activeTab={activeTab}>
-                    <div className="dormMapContainer">
-                        <DormMap setShowPopup={setShowPopup} setClickedArea={setClickedArea}/>
-                        {showPopup && (
-                                <Popup {...clickedArea}/>
-                            )}
-                    </div>
-                </TabContent>
+                    <HarwoodComponent 
+                    activeTab={activeTab} 
+                    clickedArea={clickedArea} 
+                    setClickedArea={setClickedArea} 
+                    showPopup={showPopup} 
+                    setShowPopup={setShowPopup} 
+                />
                 )}
-                {activeTab === "sontag" && (
-                <TabContent id={activeTab} activeTab={activeTab}>
-                    <div className="dormMapContainer">
-                        <DormMap setShowPopup={setShowPopup} setClickedArea={setClickedArea}/>
-                        {showPopup && (
-                                <Popup {...clickedArea}/>
-                            )}
-                    </div>
-                </TabContent>
+                {activeTab === "dialynas" && (
+                    <DialynasComponent 
+                    activeTab={activeTab} 
+                    clickedArea={clickedArea} 
+                    setClickedArea={setClickedArea} 
+                    showPopup={showPopup} 
+                    setShowPopup={setShowPopup} 
+                />
                 )}
                 {activeTab === "oldenborg" && (
-                <TabContent id="mapbox" activeTab={activeTab}>
-                    <MapboxComponent currSchool={currSchool}></MapboxComponent>
-                </TabContent>
+                    <OldenborgComponent 
+                    activeTab={activeTab} 
+                    clickedArea={clickedArea} 
+                    setClickedArea={setClickedArea} 
+                    showPopup={showPopup} 
+                    setShowPopup={setShowPopup} 
+                />
                 )}
                 {activeTab === "gibson" && (
-                <TabContent id={activeTab} activeTab={activeTab}>
-                    <div className="dormMapContainer">
-                        <DormMap setShowPopup={setShowPopup} setClickedArea={setClickedArea}/>
-                        {showPopup && (
-                                <Popup {...clickedArea}/>
-                            )}
-                    </div>
-                </TabContent>
+                    <GibsonComponent 
+                    activeTab={activeTab} 
+                    clickedArea={clickedArea} 
+                    setClickedArea={setClickedArea} 
+                    showPopup={showPopup} 
+                    setShowPopup={setShowPopup} 
+                />
                 )}
-                
+                {activeTab === "wig" && (
+                    <WigComponent 
+                    activeTab={activeTab} 
+                    clickedArea={clickedArea} 
+                    setClickedArea={setClickedArea} 
+                    showPopup={showPopup} 
+                    setShowPopup={setShowPopup} 
+                />
+                )}
+
 
             </div>
         </div>
