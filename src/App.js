@@ -1,6 +1,6 @@
 import "./App.css";
 import React, {useState} from "react";
-import Tabs from "./Components/TabComponent/Tabs";
+import Tabs from "./Components/TabComponents/Tabs";
 import { Header } from "./Components/Header/Header";
 
 const App = () => {
