@@ -1,0 +1,49 @@
+.popUp {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    justify-content: right;
+    text-align: left;
+}
+
+.popupContainer {
+    background-color: lightblue;
+    width: 30%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    overflow: auto;
+}
+
+.popupRatings {
+    font-size: 1rem;
+}
+
+.popupReviews {
+    font-size: 1rem;
+    margin: 1rem;
+}
+
+.symbol {
+    margin: 1rem 0;
+    width: 3rem;
+}
+
+.reviewForm {
+
+}
+
+label {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+form {
+    background-color: white;;
+}
+
+button {
+    padding: 0.5rem 0.5rem;
+    font-size: 1rem;
+}

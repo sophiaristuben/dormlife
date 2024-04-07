@@ -1,5 +1,7 @@
 import React from "react";
 import AC from './air-conditioner-icon.png'
+import { ReviewForm } from "./ReviewForm";
+import "./Popup.css";
 
 export const Popup = (roomProps) => {
     const {building, roomNumber} = roomProps;
@@ -15,6 +17,9 @@ export const Popup = (roomProps) => {
                 <div className="popupRatings">Sound Level</div>
                 <div className="popupRatings">Location</div>
                 <div className="popupRatings">Bathroom</div>
+            </div>
+            <div className="reviewForm">
+                <ReviewForm />
             </div>
             <div className="popupReviews">
                 <ul>
