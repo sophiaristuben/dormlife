@@ -1,11 +1,14 @@
 import React from "react";
 import './Header.css';
 import { SchoolTab } from "../TabComponents/SchoolTab/SchoolTab";
+import {Link} from "react-router-dom";
 
 export const Header = ({setCurrSchool, setActiveTab}) => {
     return (
         <div className="container">
+            <Link to="/">
             <div className="logo">p-dormlife</div>
+            </Link>
             <ul className="header">
                 <SchoolTab name="Pomona" className="school pomona" setCurrSchool={setCurrSchool} setActiveTab={setActiveTab}/>
                 <SchoolTab name="Scripps" className="school scripps" setCurrSchool={setCurrSchool} setActiveTab={setActiveTab}/>
