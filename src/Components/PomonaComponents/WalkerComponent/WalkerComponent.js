@@ -10,9 +10,15 @@ const WalkerComponent = ({activeTab, clickedArea, setClickedArea, showPopup, set
         <>
             <TabContent id={activeTab} activeTab={activeTab}>
                 <div className="dormMapContainer">
-                    <DormMap setShowPopup={setShowPopup} setClickedArea={setClickedArea} map={WalkerFloor1}/>
+                    <DormMap setShowPopup={setShowPopup} setClickedArea={setClickedArea} map={WalkerFloor1} activeTab={activeTab}/>
                     {showPopup && (
                         <Popup {...clickedArea} />
+                    )}
+                    {!showPopup && (
+                        <div className="dormInfo">
+                            <h3>Walker!</h3>
+                            <p>Walker Hall is located on North Campus directly across from Clark 5.</p>
+                        </div>
                     )}
                 </div>
             </TabContent>

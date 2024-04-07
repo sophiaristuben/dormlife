@@ -1,11 +1,23 @@
 .dormNav {
     overflow: auto;
     flex-grow: 5;
+    height: 99%;
 }
 
 img.floorplan {
     height: 70%;
     float: left;
+}
+
+.dormInfo {
+    background-color: lightblue;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    justify-content: right;
+    text-align: left;
+    width: 30%;
+    height: 70%
 }
 
 .dormMapContainer {
@@ -99,4 +111,9 @@ ul.dormButtons li:hover {
 
 ul.dormButtons li.active {
     background: #6bb7d8;
+}
+
+p {
+    font-size: 1rem;
+    margin: 1rem 0;
 }
