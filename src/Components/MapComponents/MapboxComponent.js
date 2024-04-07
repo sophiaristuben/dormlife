@@ -2,7 +2,7 @@ import React, {useEffect, useState, useRef} from 'react';
 import mapboxgl from 'mapbox-gl';
 import "mapbox-gl/dist/mapbox-gl.css";
 import { environment } from '../../Environments/EnvDev';
-import '../../App.css';
+import '../../Pages/App.css';
 
 mapboxgl.accessToken = environment.mapbox.accessToken;
 
