@@ -1,9 +1,5 @@
 import React, {StrictMode} from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './Pages/App';
-import { Home } from './Pages/Home';
-import ErrorPage from './Pages/ErrorPage';
 import reportWebVitals from './reportWebVitals';
 import {
   createBrowserRouter,
@@ -11,21 +7,27 @@ import {
 } from "react-router-dom";
 import { createRoot } from "react-dom/client";
 
+import './index.css';
+import App from './Pages/App';
+import { Home } from './Pages/Home';
+import ErrorPage from './Pages/ErrorPage';
+import { Pomona } from './Components/Schools/Pomona';
+
 const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/home",
     element: <Home />,
-    errorElement: <ErrorPage />
+    errorElement: <ErrorPage />,
   },
   {
-    path: "/maps",
+    path: "/",
     element: <App />,
     children: [
       {
         path: "pomona",
-        element: <App />, // need to change this later to a different component
+        element: <Pomona />, // need to change this later to a different component
       },
       {
         path: "scripps",
@@ -43,8 +45,7 @@ const router = createBrowserRouter([
         path: "mudd",
         element: <App />, // need to change this later to a different component
       },
-
-    ],
+    ]
   }
 ]);
 

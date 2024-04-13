@@ -1,18 +1,20 @@
 import React from "react";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
+import "./Home.css";
 
 export const Home = () => {
+
     return (
-        <>
-        <h1>Homepage</h1>
-            <nav>
-                <Link to={"/maps"}>Maps </Link>
-                <Link to={"/maps/pomona"}>Pomona </Link>
-                <Link to={"/maps/scripps"}>Scripps </Link>
-                <Link to={"/maps/cmc"}>CMC </Link>
-                <Link to={"/maps/pitzer"}>Pitzer </Link>
-                <Link to={"/maps/pitzer/mudd"}>Mudd </Link>
+        <div className="homeContainer">
+            <h1>Homepage</h1>
+            <nav className="homeHeader">
+                <Link className="school pomona" to={"/pomona"} >Pomona </Link>
+                <Link className="school scripps" to={"/scripps"}>Scripps </Link>
+                <Link className="school cmc" to={"/cmc"}>CMC </Link>
+                <Link className="school pitzer" to={"/pitzer"}>Pitzer </Link>
+                <Link className="school mudd" to={"/mudd"}>Mudd </Link>
             </nav>
-        </>
+            {/* <Outlet context={[currSchool, setCurrSchool]}/> */}
+        </div>
     );
 }

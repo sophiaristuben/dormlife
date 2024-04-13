@@ -32,7 +32,7 @@ const coordinates = {
   "default": {lng: -117.709626, lat: 34.10231, zoom: 16}
 };
 
-const MapboxComponent = ({currSchool}) => {
+const MapboxComponent = () => {
   const mapContainerRef = useRef(null);
   const map = useRef(null);
 
@@ -77,13 +77,13 @@ const MapboxComponent = ({currSchool}) => {
     return () => map.current.remove();
   }, [lng, lat, zoom]); 
 
-  // if school is changed, move the map
-  useEffect(() => {
-    const { lng: currLng, lat: currLat, zoom: currZoom } = coordinates[currSchool] || coordinates.default; // Default to Pomona if currSchool not found
-    if (currLng) setLng(currLng);
-    if (currLat) setLat(currLat);
-    if (currZoom) setZoom(currZoom);
-  }, [currSchool]); 
+  // // if school is changed, move the map
+  // useEffect(() => {
+  //   const { lng: currLng, lat: currLat, zoom: currZoom } = coordinates[currSchool] || coordinates.default; // Default to Pomona if currSchool not found
+  //   if (currLng) setLng(currLng);
+  //   if (currLat) setLat(currLat);
+  //   if (currZoom) setZoom(currZoom);
+  // }, [currSchool]); 
 
   return (
     <div className='map-container' ref={mapContainerRef} />

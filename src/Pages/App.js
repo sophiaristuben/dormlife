@@ -1,17 +1,17 @@
 import "./App.css";
-import React, { useState } from "react";
-import Tabs from "../Components/TabComponents/Tabs";
+import React from "react";
 import { Header } from "../Components/Header/Header";
+import { Outlet } from "react-router-dom";
 
 const App = () => {
-  const [currSchool, setCurrSchool] = useState("default");
-  const [activeTab, setActiveTab] = useState("mapbox");
-  
+
   return (
     <>
-      <Header setCurrSchool={setCurrSchool} setActiveTab={setActiveTab} />
+      <Header />
       <div className="App">
-        <Tabs currSchool={currSchool} activeTab={activeTab} setActiveTab={setActiveTab} />
+        <div className="Tabs">
+          <Outlet />
+        </div>
       </div>
     </>
   );
