@@ -6,23 +6,6 @@ import '../../App.css';
 
 mapboxgl.accessToken = environment.mapbox.accessToken;
 
-const geojson = {
-  type: 'FeatureCollection',
-  features: [
-    {
-      type: 'Feature',
-      geometry: {
-        type: 'Point',
-        coordinates: [-117.71255782526502, 34.09819185557174]
-      },
-      properties: {
-        title: 'Mapbox',
-        description: 'Pomona'
-      }
-    },
-  ]
-};
-
 const coordinates = {
   "Pomona": { lng: -117.71255782526502, lat: 34.09819185557174, zoom: 16 },
   "Scripps": { lng: -117.7035, lat: 34.1031, zoom: 16 },

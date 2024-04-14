@@ -30,20 +30,41 @@
     width: 3rem;
 }
 
-.reviewForm {
-
+.reviewForm-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-label {
+.reviewForm-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.reviewForm-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.reviewForm-input {
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
     font-size: 1rem;
-    font-weight: 600;
 }
 
-form {
-    background-color: white;;
-}
-
-button {
-    padding: 0.5rem 0.5rem;
+.reviewForm-submit-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
     font-size: 1rem;
+    cursor: pointer;
+}
+
+.reviewForm-submit-btn:hover {
+    background-color: #0056b3;
 }

@@ -8,7 +8,7 @@ export const DormMap = ({ setShowPopup, setClickedArea, map, activeTab }) => {
         setShowPopup(true);
         setClickedArea(areaInfo);
     }
-    useEffect(() => {
+    useEffect((activeTab) => {
         imageMapResize();
         console.log(activeTab);
     }, []);

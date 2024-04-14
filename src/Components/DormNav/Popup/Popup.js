@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import AC from './air-conditioner-icon.png'
 import { ReviewForm } from "./ReviewForm";
 import "./Popup.css";
 
 export const Popup = (roomProps) => {
     const {building, roomNumber} = roomProps;
+    const [openForm, setOpenForm] = useState(false);
+
+    const toggleForm = () => {
+        setOpenForm(!openForm);
+    };
+
     return (
         <div className="popupContainer">
             <div className="popUp">
@@ -19,8 +25,15 @@ export const Popup = (roomProps) => {
                 <div className="popupRatings">Bathroom</div>
             </div>
             <div className="reviewForm">
-                <ReviewForm />
-            </div>
+                    {!openForm && (
+                        <button onClick={toggleForm} className="popup-submit-btn">
+                            Write a Review
+                        </button>
+                    )}
+                    {openForm && (
+                        <ReviewForm toggleForm={toggleForm} />
+                    )}
+                </div>
             <div className="popupReviews">
                 <ul>
                     <li>review 1</li>
