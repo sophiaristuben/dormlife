@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import TabContent from "../../TabComponents/TabContent";
 import { DormMap } from "../../DormNav/DormMap/DormMap";
 import { Popup } from "../../DormNav/Popup/Popup";
-import GibsonFloor1 from "/Users/catherineliu/dormlife/src/Components/DormNav/DormMap/Maps/Gibson/Gibson1.png";
+import GibsonFloor1 from "../../DormNav/DormMap/Maps/Gibson/Gibson1.png";
 import FirstFloorButton from "../Buttons/Two Floors/2_1_FloorButton.png";
 import SecondFloorButton from "../Buttons/Two Floors/2_2_FloorButton.png";
 

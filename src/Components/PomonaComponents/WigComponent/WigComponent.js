@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import TabContent from "../../TabComponents/TabContent";
 import { DormMap } from "../../DormNav/DormMap/DormMap";
 import { Popup } from "../../DormNav/Popup/Popup";
-import WigFloor1 from "/Users/catherineliu/dormlife/src/Components/DormNav/DormMap/Maps/Wig/Wig1.png";
-import WigFloor2 from "/Users/catherineliu/dormlife/src/Components/DormNav/DormMap/Maps/Wig/Wig2.png";
+import WigFloor1 from "../../DormNav/DormMap/Maps/Wig/Wig1.png";
+import WigFloor2 from "../../DormNav/DormMap/Maps/Wig/Wig2.png";
 import FirstFloorButton from "../Buttons/Two Floors/2_1_FloorButton.png";
 import SecondFloorButton from "../Buttons/Two Floors/2_2_FloorButton.png";
 
