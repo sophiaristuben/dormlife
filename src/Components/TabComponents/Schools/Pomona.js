@@ -6,7 +6,7 @@ export const Pomona = () => {
 
     const pomonaDorms = {
         "walker": { dormName: "Walker", dormInfo: "Walker Hall is located on North Campus directly across from Clark 5.", mapImage: "./WalkerFloor1.png" },
-        "blaisdell": { dormName: "Blaisdell", dormInfo: "Walker Hall is located on North Campus directly across from Clark 5.", mapImage: "./TahoeHouse2005.jpg" },
+        "blaisdell": { dormName: "Blaisdell", dormInfo: "Walker Hall is located on North Campus directly across from Clark 5.", mapImage: "./BlaisdellFloor1.png" },
         "clark1": { dormName: "Clark 1", dormInfo: "Walker Hall is located on North Campus directly across from Clark 5.", mapImage: "./TahoeHouse2005.jpg"},
         "clark3": { dormName: "Clark III", dormInfo: "Walker Hall is located on North Campus directly across from Clark 5.", mapImage: "./TahoeHouse2005.jpg"},
         "clark5": { dormName: "Clark V", dormInfo: "Walker Hall is located on North Campus directly across from Clark 5.", mapImage: "./TahoeHouse2005.jpg"},
