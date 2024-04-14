@@ -30,23 +30,23 @@ function ReviewList() {
     }, [])
 
     return (
-        <section>
-            <header>
-                <h2>Add Review</h2>
-            </header>
+        <section className="review-container"> 
+        <header>
+            <h2 className="review-heading">Add Review</h2> 
+        </header>
 
-            <AddReviewBar createReview={createReview}/>
+        <AddReviewBar createReview={createReview}/>
 
-            { loading && 
-                <p>loading...</p>
-            }
+        { loading && 
+            <p>loading...</p>
+        }
 
-            <ul>
-                {reviews.length > 0 && reviews.map(review => (
-                    <ReviewListItem review={review}/>
-                ))}
-            </ul>
-        </section>
+        <ul>
+            {reviews.length > 0 && reviews.map(review => (
+                <ReviewListItem review={review}/>
+            ))}
+        </ul>
+    </section>
     )
 }
 
