@@ -4,21 +4,23 @@ import { DormNav } from "../../DormNav/DormNav";
 export const Scripps = () => {
     const [activeTab, setActiveTab] = useState("mapbox");
 
-    const scrippsDorms = [
-        { title: "240", id: "240" },
-        { title: "709", id: "709" },
-        { title: "1060", id: "1060" },
-        { title: "Browning", id: "browning" },
-        { title: "Clark", id: "clark" },
-        { title: "Dorsey", id: "dorsey" },
-        { title: "Frankel", id: "frankel" },
-        { title: "GJW", id: "gjw" },
-        { title: "Kimberly", id: "kimberly" },
-        { title: "Revelle", id: "revelle" },
-        { title: "Routt", id: "routt" },
-        { title: "Schow", id: "schow" },
-        { title: "Toll", id: "toll" },
-      ];
+      const scrippsDorms = {
+        "240": { dormName: "240", dormInfo: "", mapImage: "" },
+        "709": { dormName: "709", dormInfo: "", mapImage: "" },
+        "1060": { dormName: "1060", dormInfo: "", mapImage: "" },
+        "browning": { dormName: "Browning", dormInfo: "", mapImage: "" },
+        "clark": { dormName: "Clark", dormInfo: "", mapImage: "" },
+        "dorsey": { dormName: "Dorsey", dormInfo: "", mapImage: "" },
+        "frankel": { dormName: "Frankel", dormInfo: "", mapImage: "" },
+        "gjw": { dormName: "GJW", dormInfo: "", mapImage: "" },
+        "kimberly": { dormName: "Kimberly", dormInfo: "", mapImage: "" },
+        "revelle": { dormName: "Revelle", dormInfo: "", mapImage: "" },
+        "routt": { dormName: "Routt", dormInfo: "", mapImage: "" },
+        "schow": { dormName: "Schow", dormInfo: "", mapImage: "" },
+        "toll": { dormName: "Toll", dormInfo: "", mapImage: "" }
+    };
+    const dormIds = Object.keys(scrippsDorms);
+
 
     return (
         <>
@@ -31,7 +33,7 @@ export const Scripps = () => {
                     </>
                 )}
             </div>
-            <DormNav activeTab={activeTab} setActiveTab={setActiveTab} dormList={scrippsDorms} />
+            <DormNav activeTab={activeTab} setActiveTab={setActiveTab} dormList={scrippsDorms} dormIds={dormIds} />
         </>
     );
 }

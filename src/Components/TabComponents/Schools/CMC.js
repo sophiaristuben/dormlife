@@ -4,22 +4,24 @@ import { DormNav } from "../../DormNav/DormNav";
 export const CMC = () => {
     const [activeTab, setActiveTab] = useState("mapbox");
 
-    const cmcDorms = [
-        { title: "Appleby", id: "appleby" },
-        { title: "Auen", id: "auen" },
-        { title: "Beckett", id: "beckett" },
-        { title: "Benson", id: "benson" },
-        { title: "Berger", id: "berger" },
-        { title: "Boswell", id: "boswell" },
-        { title: "Crown", id: "crown" },
-        { title: "Fawcett", id: "fawcett" },
-        { title: "Green", id: "green" },
-        { title: "Marks", id: "marks" },
-        { title: "Phillips", id: "phillips" },
-        { title: "Stark", id: "stark" },
-        { title: "Valach", id: "valach" },
-        { title: "Wohlford", id: "wohlford" }
-      ];
+    const cmcDorms = {
+        "appleby": { dormName: "Appleby", dormInfo: "", mapImage: "" },
+        "auen": { dormName: "Auen", dormInfo: "", mapImage: "" },
+        "beckett": { dormName: "Beckett", dormInfo: "", mapImage: "" },
+        "benson": { dormName: "Benson", dormInfo: "", mapImage: "" },
+        "berger": { dormName: "Berger", dormInfo: "", mapImage: "" },
+        "boswell": { dormName: "Boswell", dormInfo: "", mapImage: "" },
+        "crown": { dormName: "Crown", dormInfo: "", mapImage: "" },
+        "fawcett": { dormName: "Fawcett", dormInfo: "", mapImage: "" },
+        "green": { dormName: "Green", dormInfo: "", mapImage: "" },
+        "marks": { dormName: "Marks", dormInfo: "", mapImage: "" },
+        "phillips": { dormName: "Phillips", dormInfo: "", mapImage: "" },
+        "stark": { dormName: "Stark", dormInfo: "", mapImage: "" },
+        "valach": { dormName: "Valach", dormInfo: "", mapImage: "" },
+        "wohlford": { dormName: "Wohlford", dormInfo: "", mapImage: "" }
+    };
+    const dormIds = Object.keys(cmcDorms);
+
 
     return (
         <>
@@ -32,7 +34,7 @@ export const CMC = () => {
                     </>
                 )}
             </div>
-            <DormNav activeTab={activeTab} setActiveTab={setActiveTab} dormList={cmcDorms}/>
+            <DormNav activeTab={activeTab} setActiveTab={setActiveTab} dormList={cmcDorms} dormIds={dormIds} />
         </>
     );
 }

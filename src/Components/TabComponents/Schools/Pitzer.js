@@ -4,15 +4,17 @@ import { DormNav } from "../../DormNav/DormNav";
 export const Pitzer = () => {
     const [activeTab, setActiveTab] = useState("mapbox");
 
-    const pitzerDorms = [
-        { title: "Pitzer", id: "pitzer" },
-        { title: "Atherton", id: "Atherton" },
-        { title: "Sanborn", id: "sanborn" },
-        { title: "Skandera", id: "skandera" },
-        { title: "Mead", id: "mead" },
-        { title: "West", id: "west" },
-        { title: "East", id: "east" },
-      ];
+    const pitzerDorms = {
+        "pitzer": { dormName: "Pitzer", dormInfo: "", mapImage: "" },
+        "Atherton": { dormName: "Atherton", dormInfo: "", mapImage: "" },
+        "sanborn": { dormName: "Sanborn", dormInfo: "", mapImage: "" },
+        "skandera": { dormName: "Skandera", dormInfo: "", mapImage: "" },
+        "mead": { dormName: "Mead", dormInfo: "", mapImage: "" },
+        "west": { dormName: "West", dormInfo: "", mapImage: "" },
+        "east": { dormName: "East", dormInfo: "", mapImage: "" }
+    };
+    const dormIds = Object.keys(pitzerDorms);
+
     return (
         <>
             <div className="floorNav">
@@ -24,7 +26,7 @@ export const Pitzer = () => {
                     </>
                 )}
             </div>
-            <DormNav activeTab={activeTab} setActiveTab={setActiveTab} dormList={pitzerDorms}/>
+            <DormNav activeTab={activeTab} setActiveTab={setActiveTab} dormList={pitzerDorms} dormIds={dormIds} />
         </>
     );
 }
