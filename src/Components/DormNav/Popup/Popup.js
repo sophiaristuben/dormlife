@@ -1,14 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import AC from './air-conditioner-icon.png'
-import { ReviewForm } from "./ReviewForm";
+import { ReviewForm } from "./ReviewForm.js";
 import "./Popup.css";
 
-export const Popup = (roomProps) => {
+export const Popup = ( roomProps) => {
+    
     const {building, roomNumber} = roomProps;
-    const [openForm, setOpenForm] = useState(false);
 
-    const toggleForm = () => {
-        setOpenForm(!openForm);
+    const handleReviewButtonClick = () => {
+        // setActiveTab("review");
     };
 
     return (
@@ -24,15 +24,14 @@ export const Popup = (roomProps) => {
                 <div className="popupRatings">Location</div>
                 <div className="popupRatings">Bathroom</div>
             </div>
+            {/* <div className="reviewForm">
+                <ReviewForm />
+            </div> */}
+
             <div className="reviewForm">
-                    {!openForm && (
-                        <button onClick={toggleForm} className="popup-submit-btn">
-                            Write a Review
-                        </button>
-                    )}
-                    {openForm && (
-                        <ReviewForm toggleForm={toggleForm} />
-                    )}
+                    <button onClick={handleReviewButtonClick} className="reviewForm-submit-btn">
+                        Write a Review
+                    </button>
                 </div>
             <div className="popupReviews">
                 <ul>

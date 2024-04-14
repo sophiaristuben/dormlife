@@ -1,43 +1,23 @@
-// ReviewForm.js
-
 import React, { useState } from "react";
 import "./Popup.css";
 
 export const ReviewForm = () => {
-    const [openForm, setOpenForm] = useState(false);
-
-    const toggleForm = () => {
-        setOpenForm(!openForm);
-    };
-
+    const [openForm, setOpenForm] = useState(false)
     return (
-        <div className="reviewForm-container">
+        <>
             {!openForm && (
-                <button onClick={toggleForm} className="reviewForm-submit-btn">
-                    Write a Review
-                </button>
+                <button onClick={() => setOpenForm(!openForm)}>Write a Review</button> 
             )}
             {openForm && (
-                <div className="reviewForm-form">
-                    <h2 className="reviewForm-title">Review Form</h2>
+                <>
+                    <p>Review Form</p>
                     <form>
-                        <label htmlFor="review" className="reviewForm-label">Thoughts!</label>
-                        <textarea
-                            id="review"
-                            className="reviewForm-input"
-                            rows="4"
-                            placeholder="Write your review here..."
-                        ></textarea>
-                        <button
-                            type="submit"
-                            className="reviewForm-submit-btn"
-                            onClick={toggleForm}
-                        >
-                            Submit Review
-                        </button>
+                        <label>Thoughts!</label>
+                        <input></input>
+                        <input type="submit" value="Submit Review" onClick={() => setOpenForm(!openForm)} />
                     </form>
-                </div>
+                </>
             )}
-        </div>
-    );
-};
+        </>
+    )
+}
