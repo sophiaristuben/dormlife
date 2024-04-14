@@ -11,7 +11,11 @@ import './index.css';
 import App from './Pages/App';
 import { Home } from './Pages/Home';
 import ErrorPage from './Pages/ErrorPage';
-import { Pomona } from './Components/Schools/Pomona';
+import { Pomona } from './Components/TabComponents/Schools/Pomona';
+import { Scripps } from './Components/TabComponents/Schools/Scripps';
+import { CMC } from './Components/TabComponents/Schools/CMC';
+import { Mudd } from './Components/TabComponents/Schools/Mudd';
+import { Pitzer } from './Components/TabComponents/Schools/Pitzer';
 
 const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);
@@ -31,19 +35,19 @@ const router = createBrowserRouter([
       },
       {
         path: "scripps",
-        element: <App />, // need to change this later to a different component
+        element: <Scripps />, // need to change this later to a different component
       },
       {
         path: "cmc",
-        element: <App />, // need to change this later to a different component
+        element: <CMC />, // need to change this later to a different component
       },
       {
         path: "pitzer",
-        element: <App />, // need to change this later to a different component
+        element: <Pitzer />, // need to change this later to a different component
       },
       {
         path: "mudd",
-        element: <App />, // need to change this later to a different component
+        element: <Mudd />, // need to change this later to a different component
       },
     ]
   }

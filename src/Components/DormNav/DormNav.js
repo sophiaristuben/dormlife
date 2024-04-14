@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import TabNavItem from "../TabComponents/TabNavItem.js";
 import TabContent from "../TabComponents/TabContent.js";
 import { Popup } from "./Popup/Popup.js";
-import WalkerComponent from "../PomonaComponents/WalkerComponent/WalkerComponent.js";
+import WalkerComponent from "../PomonaComponents/WalkerComponent/WalkerComponent.js"
 import SontagComponent from "../PomonaComponents/SontagComponent/SontagComponent.js";
 import ClarkIComponent from "../PomonaComponents/ClarkIComponent/ClarkIComponent.js";
 import ClarkIIIComponent from "../PomonaComponents/ClarkIIIComponent/ClarkIIIComponent.js";
@@ -20,26 +20,22 @@ import MapboxComponent from "../MapComponents/MapboxComponent.js";
 import "./DormNav.css";
 
 
-export const DormNav = ({activeTab, setActiveTab }) => {
+export const DormNav = ({activeTab, setActiveTab, dormList}) => {
     const [showPopup, setShowPopup] = useState(false);
     const [clickedArea, setClickedArea] = useState(null);
     return (
         <div className="dormNav" onClick={Popup}>
             <ul className="dormButtons">
-                <TabNavItem title="Walker" id="walker" activeTab={activeTab} setActiveTab={setActiveTab} setShowPopup={setShowPopup} />
-                <TabNavItem title="Blaisdell" id="blaisdell" activeTab={activeTab} setActiveTab={setActiveTab} setShowPopup={setShowPopup} />
-                <TabNavItem title="Clark 1" id="clark1" activeTab={activeTab} setActiveTab={setActiveTab} setShowPopup={setShowPopup} />
-                <TabNavItem title="Clark III" id="clark3" activeTab={activeTab} setActiveTab={setActiveTab} setShowPopup={setShowPopup} />
-                <TabNavItem title="Clark V" id="clark5" activeTab={activeTab} setActiveTab={setActiveTab} setShowPopup={setShowPopup} />
-                <TabNavItem title="Dialynas" id="dialynas" activeTab={activeTab} setActiveTab={setActiveTab} setShowPopup={setShowPopup} />
-                <TabNavItem title="Gibson" id="gibson" activeTab={activeTab} setActiveTab={setActiveTab} setShowPopup={setShowPopup} />
-                <TabNavItem title="Harwood" id="harwood" activeTab={activeTab} setActiveTab={setActiveTab} setShowPopup={setShowPopup} />
-                <TabNavItem title="Lyon" id="lyon" activeTab={activeTab} setActiveTab={setActiveTab} setShowPopup={setShowPopup} />
-                <TabNavItem title="Mudd" id="mudd" activeTab={activeTab} setActiveTab={setActiveTab} setShowPopup={setShowPopup} />
-                <TabNavItem title="Oldenborg" id="oldenborg" activeTab={activeTab} setActiveTab={setActiveTab} setShowPopup={setShowPopup} />
-                <TabNavItem title="Smiley" id="smiley" activeTab={activeTab} setActiveTab={setActiveTab} setShowPopup={setShowPopup} />
-                <TabNavItem title="Sontag" id="sontag" activeTab={activeTab} setActiveTab={setActiveTab} setShowPopup={setShowPopup} />
-                <TabNavItem title="Wig" id="wig" activeTab={activeTab} setActiveTab={setActiveTab} setShowPopup={setShowPopup} />
+                {dormList.map(dorm => (
+                    <TabNavItem
+                    key={dorm.id}
+                    title={dorm.title}
+                    id={dorm.id}
+                    activeTab={activeTab}
+                    setActiveTab={setActiveTab}
+                    setShowPopup={setShowPopup}
+                  />
+                ))}
             </ul>
             <div className="outlet">
                 {activeTab === "mapbox" && (
