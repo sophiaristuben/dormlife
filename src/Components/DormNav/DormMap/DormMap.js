@@ -1,20 +1,44 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import imageMapResize from 'image-map-resizer';
 
 export const DormMap = ({ setShowPopup, setClickedArea, map, activeTab }) => {
+    const [dormMap, setDormMap] = useState(null);
+    const [loading, setLoading] = useState(true);
+
     const handleAreaClick = (areaInfo, event) => {
         event.preventDefault();
-        console.log("hello");
         setShowPopup(true);
         setClickedArea(areaInfo);
-    }
+    };
+
+    //update the image-map when resizing the window
     useEffect(() => {
-        imageMapResize();
-        console.log(activeTab);
-    }, []);
+        if (dormMap) {
+            imageMapResize();
+        }
+    }, [activeTab, dormMap]);
+
+    // update the map on render
+    useEffect(() => {
+        setLoading(true);
+        import(`${map}`).then(image => {
+            setDormMap(image.default);
+            setLoading(false);
+        }).catch(error => {
+            console.error("Error loading image:", error);
+            setLoading(false);
+        });
+    }, [map]);
+
+    if (loading) {
+        return <div>Loading...</div>;
+    }
+
     return (
         <div className="mapImageContainer">
-            <img src={map} className="floorplan" usemap="#image-map" alt="dorm map" />
+            {dormMap && (
+                <img src={dormMap} className="floorplan" useMap="#image-map" alt="dorm map" />
+            )}
             {activeTab === "walker" && (
                 <map name="image-map">
                     <area target="" alt="652" title="652" href="" coords="112,99,49,18" shape="rect" onClick={(event) => handleAreaClick({ building: "Walker", roomNumber: "652" }, event)} />

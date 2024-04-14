@@ -1,9 +1,8 @@
 import React from "react";
 const TabNavItem = ({ id, title, activeTab, setActiveTab, setShowPopup }) => {
  const handleClick = () => {
-  console.log("TabNav clicked");
-   setActiveTab(id);
-   setShowPopup(false)
+  setActiveTab(id);
+  setShowPopup(false)
  };
  
 return (
