@@ -3,6 +3,7 @@ import imageMapResize from 'image-map-resizer';
 
 export const DormMap = ({ setShowPopup, setClickedArea, map, activeTab }) => {
     const [dormMap, setDormMap] = useState(null);
+    const [loading, setLoading] = useState(true);
 
     const handleAreaClick = (areaInfo, event) => {
         event.preventDefault();
@@ -12,24 +13,31 @@ export const DormMap = ({ setShowPopup, setClickedArea, map, activeTab }) => {
 
     //update the image-map when resizing the window
     useEffect(() => {
-        imageMapResize();
-    }, [activeTab]);
+        if (dormMap) {
+            imageMapResize();
+        }
+    }, [activeTab, dormMap]);
 
     // update the map on render
-    useEffect(() =>{
+    useEffect(() => {
+        setLoading(true);
         import(`${map}`).then(image => {
             setDormMap(image.default);
+            setLoading(false);
         }).catch(error => {
             console.error("Error loading image:", error);
+            setLoading(false);
         });
     }, [map]);
 
-    
-    console.log(map, activeTab);
+    if (loading) {
+        return <div>Loading...</div>;
+    }
+
     return (
         <div className="mapImageContainer">
             {dormMap && (
-                <img src={dormMap} className="floorplan" useMap="#image-map" alt="dorm map"/>
+                <img src={dormMap} className="floorplan" useMap="#image-map" alt="dorm map" />
             )}
             {activeTab === "walker" && (
                 <map name="image-map">
