@@ -2,10 +2,15 @@ import { useState, useEffect } from 'react'
 import { findAll, create } from './review.js'
 import AddReviewBar from './add-review-bar.js'
 import ReviewListItem from './review-list-item.js'
+import StarRating from "./StarComponent"; 
+import "./ReviewComponent.css";
 
 function ReviewList() {
-    const [loading, setLoading] = useState(false)
-    const [reviews, setReviews] = useState([])
+    const [loading, setLoading] = useState(false);
+    const [reviews, setReviews] = useState([]);
+    const [locationRating, setLocationRating] = useState(0);
+    const [noiseRating, setNoiseRating] = useState(0);
+    const [layoutRating, setLayoutRating] = useState(0);
 
     const fetchData = async () => {
         setLoading(true)
@@ -17,7 +22,12 @@ function ReviewList() {
     }
 
     const createReview = async args => {
-        const res = await create(args)
+        // const res = await create(args)
+        const res = await create({
+            locationRating,
+            noiseRating,
+            layoutRating
+        });
 
         setReviews([...reviews, {
             id: res.id,
@@ -34,6 +44,21 @@ function ReviewList() {
         <header>
             <h2 className="review-heading">Add Review</h2> 
         </header>
+        <div className="review-form">
+                <label className="review-label">
+                    Location:
+                    <StarRating value={locationRating} onChange={setLocationRating} />
+                </label>
+                <label className="review-label">
+                    Noise level:
+                    <StarRating value={noiseRating} onChange={setNoiseRating} />
+                </label>
+                <label className="review-label">
+                    Layout:
+                    <StarRating value={layoutRating} onChange={setLayoutRating} />
+                </label>
+                
+        </div>
 
         <AddReviewBar createReview={createReview}/>
 
