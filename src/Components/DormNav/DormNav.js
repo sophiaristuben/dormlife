@@ -3,6 +3,8 @@ import TabNavItem from "../TabComponents/TabNavItem.js";
 import TabContent from "../TabComponents/TabContent.js";
 import { Popup } from "./Popup/Popup.js";
 import DormComponent from "../DormComponent/DormComponent.js";
+import ReviewForm2 from "../Reviews/ReviewForm2.js";
+import { ReviewForm } from "./Popup/ReviewForm.js";
 
 // import map components
 import MapboxComponent from "../MapComponents/MapboxComponent.js";
@@ -48,6 +50,7 @@ export const DormNav = ({ activeTab, setActiveTab, dormList, dormIds }) => {
                     dormData={dormList[activeTab]}
                 />
             </div>
+            <ReviewForm2 />
         </div>
     )
 };
