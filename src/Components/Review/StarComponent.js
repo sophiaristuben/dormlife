@@ -4,9 +4,15 @@ import "./ReviewComponent.css";
 const StarRating = ({ onChange }) => {
     const [rating, setRating] = useState(0);
 
+    const unHighlight = () => {
+        setRating(0);
+        onChange(0);
+    };
+
     const handleClick = (value) => {
-        setRating(value);
-        onChange(value);
+        const newRating = value === rating ? 0 : value; 
+        setRating(newRating);
+        onChange(newRating);
     };
 
     return (

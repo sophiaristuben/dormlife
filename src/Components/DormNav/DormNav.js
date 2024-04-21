@@ -14,8 +14,7 @@ import DialynasComponent from "../PomonaComponents/DialynasComponent/DialynasCom
 import MuddComponent from "../PomonaComponents/MuddComponent/MuddComponent.js";
 import BlaisdellComponent from "../PomonaComponents/BlaisdellComponent/BlaisdellComponent.js";
 import WigComponent from "../PomonaComponents/WigComponent/WigComponent.js";
-import ReviewComponent from "../Review/ReviewComponent.js";
-import TodoList from '../Review/review-form.js'
+import ReviewList from '../Review/review-form.js'
 
 
 // import map components
@@ -162,7 +161,7 @@ export const DormNav = ({ currSchool, activeTab, setActiveTab }) => {
                 )}
 
                 {activeTab === "review" && (
-                    <TodoList/>
+                    <ReviewList/>
                 )}
             </div>
         </div>
