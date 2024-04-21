@@ -13,6 +13,8 @@
 
 .homeHeader {
   padding: 4rem 0rem 2rem 0rem;
+  display: flex;
+  justify-content: center;
 }
 
 .homeNav {
@@ -29,6 +31,10 @@
   display: flex;
   height: 100vh;
   justify-content: center;
+}
+
+.paiLogo {
+  width: 10%;
 }
 
 .school {

@@ -7,7 +7,7 @@ export const Home = () => {
     return (
         <div className="homeContainer">
             <div className="homeHeader">
-            <h1>p-dormlife</h1>
+                <img className="paiLogo" alt="p-ai logo" src="https://images.squarespace-cdn.com/content/v1/5d5aca05ce74150001a5af3e/1580018583262-NKE94RECI46GRULKS152/Screen+Shot+2019-12-05+at+11.18.53+AM.png?format=1500w" />
             </div>
             <div className="homeBody">
                 <nav className="homeNav">

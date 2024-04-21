@@ -1,3 +1,15 @@
+.dormInfo {
+    background: linear-gradient(to right, transparent 1%, rgba(173, 216, 230, 0.687), rgba(173, 216, 230, 1) );
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    justify-content: right;
+    text-align: left;
+    width: 30%;
+    height: 70%;
+    z-index: 1000;
+}
+
 .popUp {
     display: flex;
     flex-direction: column;
@@ -7,13 +19,14 @@
 }
 
 .popupContainer {
-    background-color: lightblue;
+    background-color: rgba(173, 216, 230, 0.687);
     width: 30%;
     height: 100%;
     position: absolute;
     top: 0;
     right: 0;
     overflow: auto;
+    z-index: 1000;
 }
 
 .popupRatings {
