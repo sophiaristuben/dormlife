@@ -7,13 +7,14 @@
 }
 
 .popupContainer {
-    background-color: lightblue;
+    background-color: #BDD2F0;
     display: flex;
     flex-direction: column;
-    justify-content: right;
+    justify-content: center;
     text-align: left;
-    width: 30%;
-    height: 70%
+    margin: 0 auto;
+    width: 80%;
+    /* height: 70% */
 }
 
 .popupRatings {
