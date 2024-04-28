@@ -5,35 +5,58 @@
 }
 
 img.floorplan {
-    height: 70%;
+    width: 80%;
+    margin: 0 auto;
+    /* height: 100%; */
     float: left;
+    /* overflow:visible; */
+    display: block;
 }
 
 .dormInfo {
-    background-color: lightblue;
+    background-color: #BDD2F0;
     display: flex;
     flex-direction: column;
     padding: 2rem;
     justify-content: right;
     text-align: left;
-    width: 30%;
-    height: 70%
+    width: 80%;
+    margin: 0 auto;
+    /* height: 100%; */
+    /* overflow: auto; */
 }
 
 .dormMapContainer {
     display: flex;
-    flex-direction: row;
-    height: 100%;
+    flex-direction: column;
+    /* height: 100%; */
+}
+
+.infoContentWrapper {
+    overflow: auto;
+}
+.infoContentWrapper h3 {
+    text-align: center;
 }
 
 .mapImageContainer {
-    width: 70%;
-    overflow: auto;
+    display: flex;
+    justify-content: center;
+    /* width: 100%; */
+
 }
 
 .outlet {
-    overflow: scroll;
+    /* overflow: scroll; */
     height: 100%;
+}
+
+.scrollDirections {
+    font-size: 1rem;
+    font-style: italic;
+    font-weight: bold;
+    margin: 1rem 0;
+    color: #6bb7d8;
 }
 
 /* Tab Navigation */
