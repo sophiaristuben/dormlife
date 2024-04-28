@@ -22,7 +22,8 @@ export const Home = () => {
                     <Link className="school mudd" to={"/app/mudd"}>Mudd </Link>
                 </nav>
                 <div className="homePanel">
-                    <p>Backend team can put stuff on the home page here!</p>
+                    {/* <p>Backend team can put stuff on the home page here!<br/></p> */}
+                    <Link className="survey" to={"/survey"}>Fill out our Roommate Matching Survey!</Link>
                 </div>
             </div>
         </div>

@@ -44,10 +44,11 @@
   font-weight: 600;
   justify-content: center;
   height: 6rem;
-  margin: 0 1rem;
+  margin: 0;
   padding: 1rem 2rem;
-  width: 10rem;
+  width: 12rem;
   text-decoration: none;
+  border-radius: 0;
 }
 
 .paiLogo {
@@ -74,4 +75,22 @@
 
 .school.scripps {
   background: rgb(89, 146, 96);
+}
+
+.survey {
+  align-items: center;
+  color: #003a53;
+  background: #ffffff;
+  border-radius: 1rem;
+  display: flex;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  justify-content: center;
+  height: 4rem;
+  margin-top: 5rem;
+  padding: 1rem 2rem;
+  width: 15rem;
+  text-decoration: none;
+  background: lightgrey;
 }
