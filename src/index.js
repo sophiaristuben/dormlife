@@ -21,12 +21,12 @@ const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);
 const router = createBrowserRouter([
   {
-    path: "/home",
+    path: "/",
     element: <Home />,
     errorElement: <ErrorPage />,
   },
   {
-    path: "/",
+    path: "/app",
     element: <App />,
     children: [
       {

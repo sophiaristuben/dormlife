@@ -7,6 +7,7 @@
 img.floorplan {
     height: 70%;
     float: left;
+    overflow-x: scroll;
 }
 
 .dormInfo {
@@ -17,13 +18,18 @@ img.floorplan {
     justify-content: right;
     text-align: left;
     width: 30%;
-    height: 70%
+    height: 70%;
+    overflow: auto;
 }
 
 .dormMapContainer {
     display: flex;
     flex-direction: row;
     height: 100%;
+}
+
+.infoContentWrapper {
+    overflow: auto;
 }
 
 .mapImageContainer {
@@ -34,6 +40,14 @@ img.floorplan {
 .outlet {
     overflow: scroll;
     height: 100%;
+}
+
+.scrollDirections {
+    font-size: 1rem;
+    font-style: italic;
+    font-weight: bold;
+    margin: 1rem 0;
+    color: #6bb7d8;
 }
 
 /* Tab Navigation */

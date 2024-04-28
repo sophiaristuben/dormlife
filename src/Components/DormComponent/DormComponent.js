@@ -12,6 +12,7 @@ const DormComponent = ({ activeTab, dormState, dormData }) => {
 
     return (
         <TabContent id={activeTab} activeTab={activeTab}>
+            <div className="scrollDirections">Scroll horizontally to move around the map!</div>
             <div className="dormMapContainer">
                 <DormMap setShowPopup={setShowPopup} setClickedArea={setClickedArea} map={mapImage} activeTab={activeTab}/>
                 {showPopup && (
@@ -19,8 +20,10 @@ const DormComponent = ({ activeTab, dormState, dormData }) => {
                 )}
                 {!showPopup && (
                     <div className="dormInfo">
-                        <h3>{dormName}</h3>
-                        <p>{dormInfo}</p>
+                        <div className="infoContentWrapper">
+                            <h3>{dormName}</h3>
+                            <p>{dormInfo}</p>
+                        </div>
                     </div>
                 )}
             </div>
