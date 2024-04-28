@@ -23,7 +23,7 @@ export const Home = () => {
                 </nav>
                 <div className="homePanel">
                     {/* <p>Backend team can put stuff on the home page here!<br/></p> */}
-                    <Link className="survey" to={"/survey"}>Fill out our Roommate Matching Survey!</Link>
+                    <Link className="survey" to={"/app/survey"}>Fill out our Roommate Matching Survey!</Link>
                 </div>
             </div>
         </div>
