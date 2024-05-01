@@ -85,3 +85,18 @@ p {
     font-size: 1rem;
     margin: 1rem 0;
 }
+
+button {
+    background-color: white;
+    border: 1px solid #6bb7d8;
+    border-radius: 1rem;
+    transition: all 0.7s;
+}
+
+button:hover {
+    background: #6bb7d8;
+}
+
+button:focus {
+    background: #6bb7d8;
+}
