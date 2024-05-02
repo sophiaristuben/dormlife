@@ -25,7 +25,7 @@ export const Pomona = () => {
         "clark3": {
             dormName: "Clark III",
             dormInfo: "Norton-Clark III, renovated during the summer of 2009, is actually two separate residence halls that were joined together, but each has unique features. Norton has 34 single rooms on two floors. It is L-shaped, bordering a small courtyard. Clark III has three floors with a mixture of singles and one room doubles on short hallways. Part of the building surrounds a courtyard and the other runs parallel to Sixth Street and Bixby Plaza. Norton-Clark III houses 120 students, primarily juniors and seniors, and is situated above three social rooms.  Norton-Clark III is a smoke free building.", 
-            mapImage: ["./ClarkIII1.png", "./ClarkIII23.png", "./ClarkIII23.png"]
+            mapImage: ["./ClarkIII1.png", "./ClarkIII2.png", "./ClarkIII3.png"]
         },
         "clark5": {
             dormName: "Clark V",
@@ -55,7 +55,7 @@ export const Pomona = () => {
         "lyon": {
             dormName: "Lyon",
             dormInfo: "Lyon Court, a 76-bed residence hall, was completed in 1990 and partially renovated in 1998 and 2004. It primarily houses first-year students. There is a comfortable lounge, a kitchen, study rooms and laundry facilities. Lyon Court is located on South Campus with easy access to Pendleton Pool and Wig Beach. The rooms in Lyon Court are quite large and most are one-room doubles.",
-            mapImage: ["./Lyon12.png", "./Lyon12.png"]
+            mapImage: ["./LyonFloor1.png", "./LyonFloor2.png"]
         },
         "mudd": {
             dormName: "Mudd",

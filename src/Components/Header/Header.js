@@ -11,10 +11,12 @@ export const Header = () => {
                 <a href="https://www.p-ai.org/"> 
                     <img className="paiLogo" src={PaiLogo} alt="pai logo" />
                 </a>
-                <Link to="/">
-                    <h1>p-dormlife</h1>
+                <Link to="/" className="headerTitle">
+                    <h1 >p-dormlife</h1>
                 </Link>
-                <Link to="add-review">Add Review</Link> 
+                <Link to="add-review">
+                    <button>Add Review</button>
+                </Link> 
             </div>
         </div>
     );

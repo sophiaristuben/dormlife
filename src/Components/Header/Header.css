@@ -30,3 +30,6 @@ ul.header li:hover {
     margin: 2rem 1rem;
 }
 
+.headerTitle {
+    text-decoration: none;
+}
