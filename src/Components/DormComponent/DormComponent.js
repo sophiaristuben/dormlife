@@ -19,11 +19,14 @@ const DormComponent = ({ activeTab, dormState, dormData, activeFloor}) => {
                 )}
                 {!showPopup && (
                     <div className="dormInfo">
-                        <h3>{dormName}</h3>
-                        <p>{dormInfo}</p>
+                        <div className="infoContentWrapper">
+                            <h3>{dormName}</h3>
+                            <p>{dormInfo}</p>
+                        </div>
                     </div>
                 )}
             </div>
+            <div>test</div>
         </TabContent>
     );
 };
