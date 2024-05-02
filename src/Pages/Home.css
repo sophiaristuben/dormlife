@@ -9,6 +9,7 @@
   /* same as doing flex-direction and flex */
   align-items: center;
   height: 100vh;
+  background-image: url("HomeBackground.jpeg");
 }
 
 .homeHeader {
@@ -16,6 +17,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #ffffff82;
 }
 
 .homeNav {
@@ -81,7 +83,6 @@
   align-items: center;
   color: #003a53;
   background: #ffffff;
-  border-radius: 1rem;
   display: flex;
   font-size: 1rem;
   font-weight: 600;
