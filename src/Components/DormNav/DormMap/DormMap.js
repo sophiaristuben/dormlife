@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import imageMapResize from 'image-map-resizer';
 
-export const DormMap = ({ setShowPopup, setClickedArea, map, activeTab }) => {
+export const DormMap = ({ setShowPopup, setClickedArea, map, activeTab, activeFloor }) => {
     const [dormMap, setDormMap] = useState(null);
     const [loading, setLoading] = useState(true);
 
@@ -39,7 +39,7 @@ export const DormMap = ({ setShowPopup, setClickedArea, map, activeTab }) => {
             {dormMap && (
                 <img src={dormMap} className="floorplan" useMap="#image-map" alt="dorm map" />
             )}
-            {activeTab === "walker" && (
+            {activeTab === "walker" && activeFloor===1 && (
                 <map name="image-map">
                     <area target="" alt="652" title="652" href="" coords="112,99,49,18" shape="rect" onClick={(event) => handleAreaClick({ building: "Walker", roomNumber: "652" }, event)} />
                     <area target="" alt="651" title="651" href="" coords="32,141,114,210" shape="rect" onClick={(event) => handleAreaClick({ building: "Walker", roomNumber: "651" }, event)} />
@@ -98,6 +98,63 @@ export const DormMap = ({ setShowPopup, setClickedArea, map, activeTab }) => {
                     <area target="" alt="655" title="655" href="" coords="593,18,659,89" shape="rect" onClick={(event) => handleAreaClick({ building: "Walker", roomNumber: "655" }, event)} />
                     <area target="" alt="656" title="656" href="" coords="986,18,1059,91" shape="rect" onClick={(event) => handleAreaClick({ building: "Walker", roomNumber: "656" }, event)} />
                     <area target="" alt="657" title="657" href="" coords="1062,15,1130,92" shape="rect" onClick={(event) => handleAreaClick({ building: "Walker", roomNumber: "657" }, event)} />
+                </map>
+            )}
+            {activeTab === "walker" && activeFloor===2 && (
+                <map name="image-map">
+                    <area target="" alt="753" title="753" href="" coords="392,124,478,194" shape="rect" onClick={(event) => handleAreaClick({ building: "Walker", roomNumber: "753" }, event)}/>
+                    <area target="" alt="752" title="752" href="" coords="394,195,478,260" shape="rect" onClick={(event) => handleAreaClick({ building: "Walker", roomNumber: "752" }, event)}/>
+                    <area target="" alt="751" title="751" href="" coords="393,331,476,398" shape="rect" onClick={(event) => handleAreaClick({ building: "Walker", roomNumber: "751" }, event)}/>
+                    <area target="" alt="750" title="750" href="" coords="392,398,478,462" shape="rect" onClick={(event) => handleAreaClick({ building: "Walker", roomNumber: "750" }, event)}/>
+                    <area target="" alt="749" title="749" href="" coords="475,127,562,193" shape="rect" onClick={(event) => handleAreaClick({ building: "Walker", roomNumber: "749" }, event)}/>
+                    <area target="" alt="748" title="748" href="" coords="479,196,559,260" shape="rect" onClick={(event) => handleAreaClick({ building: "Walker", roomNumber: "748" }, event)}/>
+                    <area target="" alt="747" title="747" href="" coords="478,334,559,398" shape="rect" onClick={(event) => handleAreaClick({ building: "Walker", roomNumber: "747" }, event)}/>
+                    <area target="" alt="746" title="746" href="" coords="479,400,560,462" shape="rect" onClick={(event) => handleAreaClick({ building: "Walker", roomNumber: "746" }, event)}/>
+                    <area target="" alt="745" title="745" href="" coords="860,127,943,198" shape="rect" onClick={(event) => handleAreaClick({ building: "Walker", roomNumber: "745" }, event)}/>
+                    <area target="" alt="744" title="744" href="" coords="859,198,942,262" shape="rect" onClick={(event) => handleAreaClick({ building: "Walker", roomNumber: "744" }, event)}/>
+                    <area target="" alt="743" title="743" href="" coords="860,334,943,400" shape="rect" onClick={(event) => handleAreaClick({ building: "Walker", roomNumber: "743" }, event)}/>
+                    <area target="" alt="742" title="742" href="" coords="862,398,943,462" shape="rect" onClick={(event) => handleAreaClick({ building: "Walker", roomNumber: "742" }, event)}/>
+                    <area target="" alt="741" title="741" href="" coords="945,129,1026,198" shape="rect" onClick={(event) => handleAreaClick({ building: "Walker", roomNumber: "741" }, event)}/>
+                    <area target="" alt="740" title="740" href="" coords="945,198,1027,263" shape="rect" onClick={(event) => handleAreaClick({ building: "Walker", roomNumber: "740" }, event)}/>
+                    <area target="" alt="739" title="739" href="" coords="945,331,1026,400" shape="rect" onClick={(event) => handleAreaClick({ building: "Walker", roomNumber: "739" }, event)}/>
+                    <area target="" alt="738" title="738" href="" coords="945,401,1027,464" shape="rect" onClick={(event) => handleAreaClick({ building: "Walker", roomNumber: "738" }, event)}/>
+                    <area target="" alt="737" title="737" href="" coords="1332,127,1416,196" shape="rect" onClick={(event) => handleAreaClick({ building: "Walker", roomNumber: "737" }, event)}/>
+                    <area target="" alt="736" title="736" href="" coords="1330,198,1415,262" shape="rect" onClick={(event) => handleAreaClick({ building: "Walker", roomNumber: "736" }, event)}/>
+                    <area target="" alt="735" title="735" href="" coords="1333,334,1416,400" shape="rect" onClick={(event) => handleAreaClick({ building: "Walker", roomNumber: "735" }, event)}/>
+                    <area target="" alt="734" title="734" href="" coords="1332,401,1416,464" shape="rect" onClick={(event) => handleAreaClick({ building: "Walker", roomNumber: "734" }, event)}/>
+                    <area target="" alt="733" title="733" href="" coords="1350,620,1416,706" shape="rect" onClick={(event) => handleAreaClick({ building: "Walker", roomNumber: "733" }, event)}/>
+                    <area target="" alt="732" title="732" href="" coords="1280,507,1349,588" shape="rect" onClick={(event) => handleAreaClick({ building: "Walker", roomNumber: "732" }, event)}/>
+                    <area target="" alt="731" title="731" href="" coords="1280,622,1347,704" shape="rect" onClick={(event) => handleAreaClick({ building: "Walker", roomNumber: "731" }, event)}/>
+                    <area target="" alt="730" title="730" href="" coords="1212,507,1278,589" shape="rect" onClick={(event) => handleAreaClick({ building: "Walker", roomNumber: "730" }, event)}/>
+                    <area target="" alt="729" title="729" href="" coords="1212,622,1278,706" shape="rect" onClick={(event) => handleAreaClick({ building: "Walker", roomNumber: "729" }, event)}/>
+                    <area target="" alt="728" title="728" href="" coords="1145,507,1211,589" shape="rect" onClick={(event) => handleAreaClick({ building: "Walker", roomNumber: "728" }, event)}/>
+                    <area target="" alt="727" title="727" href="" coords="1076,622,1145,703" shape="rect" onClick={(event) => handleAreaClick({ building: "Walker", roomNumber: "727" }, event)}/>
+                    <area target="" alt="726" title="726" href="" coords="1076,504,1145,589" shape="rect" onClick={(event) => handleAreaClick({ building: "Walker", roomNumber: "726" }, event)}/>
+                    <area target="" alt="725" title="725" href="" coords="1012,620,1076,704" shape="rect" onClick={(event) => handleAreaClick({ building: "Walker", roomNumber: "725" }, event)}/>
+                    <area target="" alt="724" title="724" href="" coords="1010,505,1075,588" shape="rect" onClick={(event) => handleAreaClick({ building: "Walker", roomNumber: "724" }, event)}/>
+                    <area target="" alt="723" title="723" href="" coords="948,622,1013,704" shape="rect" onClick={(event) => handleAreaClick({ building: "Walker", roomNumber: "723" }, event)}/>
+                    <area target="" alt="722" title="722" href="" coords="880,622,945,703" shape="rect" onClick={(event) => handleAreaClick({ building: "Walker", roomNumber: "722" }, event)}/>
+                    <area target="" alt="721" title="721" href="" coords="811,622,877,704" shape="rect" onClick={(event) => handleAreaClick({ building: "Walker", roomNumber: "721" }, event)}/>
+                    <area target="" alt="720" title="720" href="" coords="810,507,876,588" shape="rect" onClick={(event) => handleAreaClick({ building: "Walker", roomNumber: "720" }, event)}/>
+                    <area target="" alt="719" title="719" href="" coords="744,620,810,704" shape="rect" onClick={(event) => handleAreaClick({ building: "Walker", roomNumber: "719" }, event)}/>
+                    <area target="" alt="718" title="718" href="" coords="744,507,808,588" shape="rect" onClick={(event) => handleAreaClick({ building: "Walker", roomNumber: "718" }, event)}/>
+                    <area target="" alt="717" title="717" href="" coords="675,505,742,588" shape="rect" onClick={(event) => handleAreaClick({ building: "Walker", roomNumber: "717" }, event)}/>
+                    <area target="" alt="716" title="716" href="" coords="611,507,674,589" shape="rect" onClick={(event) => handleAreaClick({ building: "Walker", roomNumber: "716" }, event)}/>
+                    <area target="" alt="715" title="715" href="" coords="611,620,677,703" shape="rect" onClick={(event) => handleAreaClick({ building: "Walker", roomNumber: "715" }, event)}/>
+                    <area target="" alt="714" title="714" href="" coords="543,507,608,588" shape="rect" onClick={(event) => handleAreaClick({ building: "Walker", roomNumber: "714" }, event)}/>
+                    <area target="" alt="713" title="713" href="" coords="543,622,609,704" shape="rect" onClick={(event) => handleAreaClick({ building: "Walker", roomNumber: "713" }, event)}/>
+                    <area target="" alt="712" title="712" href="" coords="478,622,543,706" shape="rect" onClick={(event) => handleAreaClick({ building: "Walker", roomNumber: "712" }, event)}/>
+                    <area target="" alt="711" title="711" href="" coords="410,620,478,703" shape="rect" onClick={(event) => handleAreaClick({ building: "Walker", roomNumber: "711" }, event)}/>
+                    <area target="" alt="710" title="710" href="" coords="344,507,409,588" shape="rect" onClick={(event) => handleAreaClick({ building: "Walker", roomNumber: "710" }, event)}/>
+                    <area target="" alt="709" title="709" href="" coords="344,622,409,703" shape="rect" onClick={(event) => handleAreaClick({ building: "Walker", roomNumber: "709" }, event)}/>
+                    <area target="" alt="708" title="708" href="" coords="277,507,343,588" shape="rect" onClick={(event) => handleAreaClick({ building: "Walker", roomNumber: "708" }, event)}/>
+                    <area target="" alt="707" title="707" href="" coords="277,620,341,703" shape="rect" onClick={(event) => handleAreaClick({ building: "Walker", roomNumber: "707" }, event)}/>
+                    <area target="" alt="706" title="706" href="" coords="208,507,274,589" shape="rect" onClick={(event) => handleAreaClick({ building: "Walker", roomNumber: "706" }, event)}/>
+                    <area target="" alt="705" title="705" href="" coords="210,620,277,704" shape="rect" onClick={(event) => handleAreaClick({ building: "Walker", roomNumber: "705" }, event)}/>
+                    <area target="" alt="704" title="704" href="" coords="145,507,208,589" shape="rect" onClick={(event) => handleAreaClick({ building: "Walker", roomNumber: "704" }, event)}/>
+                    <area target="" alt="703" title="703" href="" coords="73,620,144,706" shape="rect" onClick={(event) => handleAreaClick({ building: "Walker", roomNumber: "703" }, event)}/>
+                    <area target="" alt="702" title="702" href="" coords="80,508,142,588" shape="rect" onClick={(event) => handleAreaClick({ building: "Walker", roomNumber: "702" }, event)}/>
+                    <area target="" alt="701" title="701" href="" coords="5,622,72,706" shape="rect" onClick={(event) => handleAreaClick({ building: "Walker", roomNumber: "701" }, event)}/>
                 </map>
             )}
 

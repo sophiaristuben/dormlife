@@ -9,8 +9,7 @@ import MapboxComponent from "../MapComponents/MapboxComponent.js";
 import "./DormNav.css";
 
 
-export const DormNav = ({ activeTab, setActiveTab, dormList, dormIds, activeFloor }) => {
-    const [showPopup, setShowPopup] = useState(false);
+export const DormNav = ({ activeTab, setActiveTab, dormList, dormIds, activeFloor, setActiveFloor, showPopup, setShowPopup }) => {
     const [clickedArea, setClickedArea] = useState(null);
 
     const dormComponentState = {
@@ -31,6 +30,7 @@ export const DormNav = ({ activeTab, setActiveTab, dormList, dormIds, activeFloo
                         activeTab={activeTab}
                         setActiveTab={setActiveTab}
                         setShowPopup={setShowPopup}
+                        setActiveFloor={setActiveFloor}
                     />
                 ))}
             </ul>
