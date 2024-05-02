@@ -14,6 +14,7 @@ export const Header = () => {
                 <Link to="/">
                     <h1>p-dormlife</h1>
                 </Link>
+                <Link to="add-review">Add Review</Link> 
             </div>
         </div>
     );
