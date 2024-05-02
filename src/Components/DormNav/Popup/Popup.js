@@ -7,10 +7,16 @@ import "./Popup.css";
 
 export const Popup = (roomProps) => {
     const {building, roomNumber} = roomProps;
+    // const [reviews, setReviews] = useState([]);
 
     // useEffect(() => {
-    //     getAllReviews();
-    //   }, []);
+    //     const fetchReviews = async () => {
+    //         const gottedReviews = await getAllReviews();
+    //         setReviews(gottedReviews);
+    //     }
+    //     fetchReviews();
+    //     console.log(reviews);
+    //   },[reviews]);
 
     return (
         <div className="popupContainer">
