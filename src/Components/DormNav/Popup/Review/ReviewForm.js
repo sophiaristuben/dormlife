@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
-import './ReviewForm.css'; // Import the CSS file specifically for the ReviewForm
+import './ReviewForm.css'; 
+// connection to firebase
+import { db } from './firebase';
+import { collection, addDoc } from "firebase/firestore";
 
 const ReviewForm = () => {
     const dormList = [
@@ -8,7 +11,6 @@ const ReviewForm = () => {
         "Smiley", "Sontag", "Wig"
     ];
 
-    // States for each form field
     const [selectedDorm, setSelectedDorm] = useState(dormList[0]);
     const [roomNumber, setRoomNumber] = useState('');
     const [layoutRating, setLayoutRating] = useState(3);
@@ -17,20 +19,25 @@ const ReviewForm = () => {
     const [bathroomRating, setBathroomRating] = useState(3);
     const [review, setReview] = useState('');
 
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        // Here you will handle submitting these data to Firebase
-        console.log({
-            selectedDorm,
-            roomNumber,
-            layoutRating,
-            locationRating,
-            soundRating,
-            bathroomRating,
-            review
-        });
-        // Reset the form or do other actions following form submission
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        console.log(db);
+
+        const reviewData = {
+            dorm: selectedDorm,
+            roomNumber: roomNumber,
+            layoutRating: parseInt(layoutRating, 10),
+            locationRating: parseInt(locationRating, 10),
+            soundRating: parseInt(soundRating, 10),
+            bathroomRating: parseInt(bathroomRating, 10),
+            reviewText: review
+        };
+        console.log("Submitting:", reviewData);
+
+        db.collection("reviews").add(reviewData);
+ 
     };
+
 
     return (
         <div className="formContainer">
