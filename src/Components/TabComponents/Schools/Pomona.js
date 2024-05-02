@@ -4,6 +4,8 @@ import { DormNav } from "../../DormNav/DormNav";
 export const Pomona = () => {
     const [activeTab, setActiveTab] = useState("mapbox");
     const [activeFloor, setActiveFloor] = useState(1);
+    const [showPopup, setShowPopup] = useState(false);
+
     const pomonaDorms = {
         "walker": {
             dormName: "Walker",
@@ -93,6 +95,7 @@ export const Pomona = () => {
 
     const changeFloor = (floor) => {
         setActiveFloor(floor);
+        setShowPopup(false);
     };
 
     return (
@@ -187,7 +190,7 @@ export const Pomona = () => {
                     </>
                 )}
             </div>
-            <DormNav activeTab={activeTab} setActiveTab={setActiveTab} dormList={pomonaDorms} dormIds={dormIds} activeFloor={activeFloor} setActiveFloor={setActiveFloor}/>
+            <DormNav activeTab={activeTab} setActiveTab={setActiveTab} dormList={pomonaDorms} dormIds={dormIds} activeFloor={activeFloor} setActiveFloor={setActiveFloor} showPopup={showPopup} setShowPopup={setShowPopup} />
             {/* <DormNav activeTab={activeTab} setActiveTab={setActiveTab} dormList={pomonaDorms} dormIds={dormIds} /> */}
         </>
     );
