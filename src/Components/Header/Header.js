@@ -8,6 +8,7 @@ export const Header = () => {
             <Link to="/">
             <div className="logo">p-dormlife</div>
             </Link>
+            <Link to="add-review">Add Review</Link> 
         </div>
     )
 };

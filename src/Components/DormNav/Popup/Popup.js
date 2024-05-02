@@ -1,6 +1,6 @@
 import React from "react";
 import AC from './air-conditioner-icon.png'
-import { ReviewForm } from "./ReviewForm";
+// import { ReviewForm } from "./Review/ReviewForm";
 import "./Popup.css";
 
 export const Popup = (roomProps) => {
@@ -18,9 +18,9 @@ export const Popup = (roomProps) => {
                 <div className="popupRatings">Location</div>
                 <div className="popupRatings">Bathroom</div>
             </div>
-            <div className="reviewForm">
+            {/* <div className="reviewForm">
                 <ReviewForm />
-            </div>
+            </div> */}
             <div className="popupReviews">
                 <ul>
                     <li>review 1</li>
