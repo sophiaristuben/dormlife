@@ -8,12 +8,12 @@ export const Pomona = () => {
         "walker": {
             dormName: "Walker",
             dormInfo: "Walker Hall provides the largest lounge on campus, as well as laundry and kitchen facilities for 112 residents. The residence hall faces Honnold library to the north. A large grassy area to the north and east, called Walker Beach, provides a good place to play Frisbee, study or sunbathe. The main lounge area has a baby grand piano and a television. Laundry facilities are in the basement. Most of the rooms in Walker are singles arranged along two main hallways. Walker wings are adjacent to Walker's main halls. The Walker wing rooms are singles and two-room doubles, and have outside entrances from small courtyards. Walker was completely renovated during the summer of 1999 and is a smoke free building.", 
-            mapImage: ["./WalkerFloor1.png", "./Walker2.png"] }
+            mapImage: ["./WalkerFloor1.png", "./Walker2.png"] 
         },
         "blaisdell": {
             dormName: "Blaisdell",
             dormInfo: "Mudd-Blaisdell, the largest residence hall on South Campus, houses more than 280 students in singles and one-room doubles. It is situated around a grassy courtyard and is adjacent to tennis courts and a swimming pool. Two large central lounges provide students with a break from hall life. Other facilities in the residence hall include two kitchens, a conference room, two laundry rooms in the basement and a sun deck on the roof. Mostly first-year students occupy the one-room doubles. Mudd-Blaisdell was completely renovated and air conditioning was installed during the summers of 2000 and 2001.", 
-           mapImage: ["./BlaisdellFloor1.png"]
+           mapImage: ["./BlaisdellFloor1.png"],
         },
         "clark1": {
             dormName: "Clark 1",
@@ -45,11 +45,11 @@ export const Pomona = () => {
             dormInfo: "Harwood Court is the oldest residence hall on South Campus. Built in 1921, it was most recently renovated in 2010 to provide modern facilities, upgrade the plumbing and electrical systems, improve sustainability, and to preserve the original charm of the building. Harwood is arranged around a central courtyard and houses 170 students. The residence hall has a large main lounge area with its own kitchen, television room and grand piano. Laundry facilities are in the basement. Both single and double rooms are available and primarily first-year students and sophomores live there. ", 
             mapImage: ["ResHall-FloorPlan-Harwood 1-1.png", "ResHall-FloorPlan-Harwood 2-1.png", "ResHall-FloorPlan-Harwood 3-1.png", "ResHall-FloorPlan-Harwood 0-1.png"]
         },
-        "lawry": {
-            dormName: "Lawry",
-            dormInfo: "Lawry Court, built in the early 1980s, is one of the more unique buildings. It consists of three separate towers, each with three floors. Each floor has eight single rooms situated around a lounge and bathroom facilities. Lawry is next to Walton Commons, where the laundry facility is located. Lawry is a smoke free building.",
-            mapImage: "./Maps/Lawry/Lawry123.png"
-        },
+        // "lawry": {
+        //     dormName: "Lawry",
+        //     dormInfo: "Lawry Court, built in the early 1980s, is one of the more unique buildings. It consists of three separate towers, each with three floors. Each floor has eight single rooms situated around a lounge and bathroom facilities. Lawry is next to Walton Commons, where the laundry facility is located. Lawry is a smoke free building.",
+        //     mapImage: "./Maps/Lawry/Lawry123.png"
+        // },
         "lyon": {
             dormName: "Lyon",
             dormInfo: "Lyon Court, a 76-bed residence hall, was completed in 1990 and partially renovated in 1998 and 2004. It primarily houses first-year students. There is a comfortable lounge, a kitchen, study rooms and laundry facilities. Lyon Court is located on South Campus with easy access to Pendleton Pool and Wig Beach. The rooms in Lyon Court are quite large and most are one-room doubles.",
@@ -186,8 +186,8 @@ export const Pomona = () => {
                     </>
                 )}
             </div>
-
             <DormNav activeTab={activeTab} setActiveTab={setActiveTab} dormList={pomonaDorms} dormIds={dormIds} activeFloor={activeFloor}/>
+            {/* <DormNav activeTab={activeTab} setActiveTab={setActiveTab} dormList={pomonaDorms} dormIds={dormIds} /> */}
         </>
     );
 }
