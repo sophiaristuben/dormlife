@@ -13,7 +13,7 @@ const DormComponent = ({ activeTab, dormState, dormData, activeFloor}) => {
     return (
         <TabContent id={activeTab} activeTab={activeTab}>
             <div className="dormMapContainer">
-                <DormMap setShowPopup={setShowPopup} setClickedArea={setClickedArea} map={mapImage[activeFloor-1]} activeTab={activeTab}/>
+                <DormMap setShowPopup={setShowPopup} setClickedArea={setClickedArea} map={mapImage[activeFloor-1]} activeTab={activeTab} activeFloor={activeFloor}/>
                 {showPopup && (
                     <Popup {...clickedArea} />
                 )}
@@ -26,7 +26,6 @@ const DormComponent = ({ activeTab, dormState, dormData, activeFloor}) => {
                     </div>
                 )}
             </div>
-            <div>test</div>
         </TabContent>
     );
 };
