@@ -3,7 +3,7 @@ import TabContent from "../TabComponents/TabContent";
 import { DormMap } from "../DormNav/DormMap/DormMap";
 import { Popup } from "../DormNav/Popup/Popup";
 
-const DormComponent = ({ activeTab, dormState, dormData }) => {
+const DormComponent = ({ activeTab, dormState, dormData, activeFloor}) => {
     if (!dormData || !dormState) {
         return null;
     }
@@ -13,7 +13,7 @@ const DormComponent = ({ activeTab, dormState, dormData }) => {
     return (
         <TabContent id={activeTab} activeTab={activeTab}>
             <div className="dormMapContainer">
-                <DormMap setShowPopup={setShowPopup} setClickedArea={setClickedArea} map={mapImage} activeTab={activeTab}/>
+                <DormMap setShowPopup={setShowPopup} setClickedArea={setClickedArea} map={mapImage[activeFloor-1]} activeTab={activeTab}/>
                 {showPopup && (
                     <Popup {...clickedArea} />
                 )}
