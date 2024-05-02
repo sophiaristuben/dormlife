@@ -17,7 +17,7 @@ import { CMC } from './Components/TabComponents/Schools/CMC';
 import { Mudd } from './Components/TabComponents/Schools/Mudd';
 import { Pitzer } from './Components/TabComponents/Schools/Pitzer';
 import RoommateSurvey from './Components/TabComponents/SurveyComponent/RoommateSurvey';
-import ReviewForm from './Components/DormNav/Popup/Review/ReviewForm.js';
+import ReviewForm from './Components/DormNav/Popup/ReviewForm.js';
 
 const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);

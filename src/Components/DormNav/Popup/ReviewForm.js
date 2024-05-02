@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import './ReviewForm.css'; 
 // connection to firebase
 import { db } from './firebase';
-import { collection, addDoc } from "firebase/firestore";
+import { doc, setDoc, Timestamp} from "firebase/firestore";
+
 
 const ReviewForm = () => {
     const dormList = [
@@ -34,7 +35,23 @@ const ReviewForm = () => {
         };
         console.log("Submitting:", reviewData);
 
-        db.collection("reviews").add(reviewData);
+        try {
+            const id_timestamp = Timestamp.fromDate(new Date()).toMillis().toString();
+
+            await setDoc(doc(db, "reviews", id_timestamp), reviewData);
+
+            console.log("Review submitted successfully!");
+
+            setSelectedDorm(dormList[0]);
+            setRoomNumber('');
+            setLayoutRating(3);
+            setLocationRating(3);
+            setSoundRating(3);
+            setBathroomRating(3);
+            setReview('');
+        } catch (error) {
+            console.error("Error adding document: ", error);
+        }
  
     };
 

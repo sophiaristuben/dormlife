@@ -1,17 +1,22 @@
-import React from "react";
-import AC from './air-conditioner-icon.png'
+import React, { useEffect, useState } from "react";
 // import { ReviewForm } from "./Review/ReviewForm";
 import "./Popup.css";
+// import {db} from "./firebase.js";
+// import { getAllReviews } from "./reviewService";
+
 
 export const Popup = (roomProps) => {
     const {building, roomNumber} = roomProps;
+
+    // useEffect(() => {
+    //     getAllReviews();
+    //   }, []);
+
     return (
         <div className="popupContainer">
             <div className="popUp">
             <h3>{building} {roomNumber}</h3>
-            <div className="popupSymbols">
-                <img src={AC} alt="air conditioner" className="symbol" />
-            </div>
+
             <div className="popupRatingsContainer">
                 <div className="popupRatings">Layout</div>
                 <div className="popupRatings">Sound Level</div>
